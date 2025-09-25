@@ -1,0 +1,112 @@
+{
+  "questions": [
+    {
+      "question": "In representation models that take document length into account, the main goal is to ...",
+      "options": [
+        "Normalize term weights to prevent long documents from dominating similarity.",
+        "Assign higher weight to documents only for having more words.",
+        "Give more value to long documents because they contain more terms.",
+        "Automatically determine term relevance without calculating TF or IDF."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué modelo de representación es más fácil de programar?",
+      "options": [
+        "TF-IDF.",
+        "TF.",
+        "Matriz de incidencia término-documento.",
+        "Todas son iguales de programar."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Indicate the INCORRECT option about an information retrieval (IR) model [D,Q,F,R(qi,dj)]:",
+      "options": [
+        "D represents the logical views of the documents.",
+        "R(qi,dj) is not a matching or ranking function.",
+        "It is not the same as a representation model.",
+        "Q represents the logical views of the user queries."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Information retrieval can only be applied to text.",
+      "options": [
+        "True: only to text.",
+        "False: it can also be applied to images, audio, video, medical data, signals, etc."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In IR, the global reference is associated with ...",
+      "options": [
+        "None of the other options.",
+        "The term-document incidence matrix.",
+        "The inverse document frequency (IDF).",
+        "The frequency of a term within a document (TF)."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the term-document incidence matrix ...",
+      "options": [
+        "The value 1 indicates the absence of the term in the associated document.",
+        "Each row corresponds to a document and each column to a term.",
+        "It assigns the frequency of occurrence of each term in each document.",
+        "The value 1 indicates the presence of the term in the associated document."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The conjunctive component of terms refers to ...",
+      "options": [
+        "The joint representation of all terms that characterize a document.",
+        "The joint representation of all terms that characterize a query.",
+        "The joint representation of all terms that characterize a document or a query.",
+        "None of the other options."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In information retrieval (IR), the local reference is associated with ...",
+      "options": [
+        "The frequency of a term within a document (TF).",
+        "The number of documents in the collection in which a term appears.",
+        "The relationship between document length and term importance.",
+        "None of the other options."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In information retrieval ...",
+      "options": [
+        "Recall(exhaustividad) measures how many retrieved documents are relevant.",
+        "Precision(especificidad) measures how many retrieved documents are relevant.",
+        "Recall(exhaustividad) measures the proportion of relevant documents that are retrieved.",
+        "Precision(especificidad) measures the proportion of relevant documents that are retrieved."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "TF-IDF weighting combines ...",
+      "options": [
+        "The frequency of a term in a document and the frequency of the term in the collection.",
+        "The frequency of a term in a document and the inverse frequency of the term in the collection.",
+        "The inverse frequency of a term in a document and the inverse frequency of the term in the collection.",
+        "The inverse frequency of a term in a document and the frequency of the term in the collection."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    }
+  ]
+}
