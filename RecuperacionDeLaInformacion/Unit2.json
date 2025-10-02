@@ -1,0 +1,197 @@
+{
+  "questions": [
+    {
+      "question": "¿Qué ventaja tiene RegexAnalyzer?",
+      "options": [
+        "Permite definir expresiones regulares para tokenizar.",
+        "Aplica automáticamente un stemmer.",
+        "Convierte tokens a números enteros.",
+        "Elimina todas las palabras numéricas."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué diferencia principal tiene SimpleAnalyzer frente a StandardAnalyzer?",
+      "options": [
+        "Convierte tokens en mayúsculas.",
+        "Aplica stemming.",
+        "Ordena tokens por frecuencia.",
+        "No elimina stopwords."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Vas a indexar títulos y resúmenes y quieres buscar en ambos a la vez. ¿Qué parser usas?",
+      "options": [
+        "WildcardPlugin.",
+        "RegexAnalyzer.",
+        "QueryParser.",
+        "MultifieldParser."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué analizador sería más útil para procesar documentos en español considerando las raíces de palabras?",
+      "options": [
+        "SimpleAnalyzer con SpanishSimpleAnalyzer.",
+        "RegexAnalyzer con SpanishRegexAnalyzer.",
+        "StemmingAnalyzer con SpanishStemmer.",
+        "KeywordAnalyzer con SpanishKeywordAnalyzer."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Un estudiante piensa que WildcardPlugin permite buscar por rangos de fechas. ¿Qué error comete?",
+      "options": [
+        "WildcardPlugin solo admite comodines en texto, no en números.",
+        "WildcardPlugin funciona solo en títulos.",
+        "WildcardPlugin elimina términos duplicados.",
+        "WildcardPlugin convierte fechas a texto."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué pasa si no se añade un plugin antes de parsear una consulta que lo requiere?",
+      "options": [
+        "El parser ignora todos los campos.",
+        "El parser no reconoce la sintaxis especial.",
+        "El parser convierte la consulta en texto plano.",
+        "El parser genera tokens vacíos."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué es un índice invertido en RI?",
+      "options": [
+        "Una estructura que asocia cada término con los documentos en los que aparece.",
+        "Un árbol binario de documentos por fecha.",
+        "Una lista de documentos ordenados cronológicamente.",
+        "Una tabla hash con claves aleatorias."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué el índice invertido hace más rápidas las búsquedas?",
+      "options": [
+        "Porque relaciona términos con los documentos donde aparecen.",
+        "Porque guarda los documentos completos en memoria.",
+        "Porque elimina automáticamente duplicados.",
+        "Porque no necesita tokenizar el texto."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Una empresa quiere búsquedas avanzadas con API REST y escalado en clusters. ¿Qué herramienta elegiría?",
+      "options": ["Whoosh.", "Solr.", "Elasticsearch.", "PyLucene."],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Un sistema necesita búsquedas en grandes volúmenes de datos no estructurados. ¿Qué opción es más adecuada?",
+      "options": [
+        "Una base de datos orientada a grafos sin índices.",
+        "Un SGBD relacional estándar.",
+        "Una hoja de cálculo con filtros.",
+        "Un motor basado en índice invertidos."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Un estudiante usa SimpleAnalyzer y piensa que elimina stopwords como \"el\" y \"la\". ¿Qué error comete?",
+      "options": [
+        "SimpleAnalyzer no elimina stopwords.",
+        "SimpleAnalyzer no permite indexar números.",
+        "SimpleAnalyzer solo funciona en inglés.",
+        "SimpleAnalyzer convierte a mayúsculas."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es la mejor opción para buscar documentos publicados antes del año 2000?",
+      "options": [
+        "Usar StandardAnalyzer en todos los campos.",
+        "Usar GtLtPlugin con year:<2000.",
+        "Usar KeywordAnalyzer en el campo año.",
+        "Usar FuzzyTermPlugin con fecha aproximada."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Un estudiante cree que IndexWriter es más rápido que AsyncWriter en entornos multiusuario. ¿Qué detalle pasa por alto?",
+      "options": [
+        "IndexWriter bloquea el índice, AsyncWriter no.",
+        "IndexWriter no puede añadir documentos.",
+        "IndexWriter no funciona en Windows.",
+        "IndexWriter elimina documentos por defecto."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué pasa si usas KeywordAnalyzer en un campo de etiquetas?",
+      "options": [
+        "El campo se ignora en el índice.",
+        "El texto se convierte automáticamente en números.",
+        "El texto completo se trata como un único token.",
+        "El texto se divide en palabras y se eliminan stopwords."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Los sistemas de Recuperación de Información están orientados a:",
+      "options": [
+        "Gestión de bases de datos relacionales.",
+        "Procesamiento de transacciones financieras.",
+        "Operaciones en tiempo real.",
+        "Documentos."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué ocurre si en Whoosh se usa TEXT(stored=False) por defecto?",
+      "options": [
+        "No se puede mostrar el contenido del campo en los resultados.",
+        "El campo desaparece del esquema.",
+        "El índice no podrá buscar en ese campo.",
+        "El campo genera error al indexar."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es la ventaja de usar MultifieldParser con OrGroup?",
+      "options": [
+        "Permite buscar en varios campos uniendo términos con OR.",
+        "Elimina stopwords de todos los idiomas.",
+        "Convierte todas las consultas en búsquedas exactas.",
+        "Solo busca en un campo numérico."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "En un buscador se consulta por \"correr\" y también se quieren recuperar documentos con \"corriendo\". ¿Qué debes usar?",
+      "options": [
+        "StemmingAnalyzer.",
+        "SimpleAnalyzer.",
+        "KeywordAnalyzer.",
+        "RegexAnalyzer."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
