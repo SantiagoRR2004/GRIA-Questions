@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "question": "Un alumno cree que union() de modelos borra las sentencias duplicadas del resultado. ¿Qué detalle ignora?",
+      "options": [
+        "Las duplicadas no afectan, pero permanecen en el grafo fusionado.",
+        "union() convierte los recursos en literales.",
+        "union() solo funciona con TDB.",
+        "union() reemplaza prefijos."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué se recomienda usar interfaces (Resource, Property, Literal) en lugar de clases de implementación en Jena?",
+      "options": [
+        "Porque las clases impl no permiten literales.",
+        "Porque obliga a usar solo XML.",
+        "Porque las interfaces son más rápidas.",
+        "Para mantener independencia de la implementación concreta."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué pasa si se repite la misma declaración en un modelo RDF?",
+      "options": [
+        "No ocurre nada, los duplicados no tienen efecto.",
+        "El modelo se borra.",
+        "Se lanza una excepción.",
+        "Se cambian los prefijos automáticamente."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué ocurre si serializas un modelo en RDF/XML?",
+      "options": [
+        "Obtienes un formato estándar pero menos legible para humanos.",
+        "Los literales desaparecen.",
+        "El modelo se convierte en JSON automáticamente.",
+        "Los predicados cambian de nombre."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué RDF usa tripletas sujeto-predicado-objeto?",
+      "options": [
+        "Porque garantiza que los datos siempre sean números.",
+        "Porque obliga a usar JSON.",
+        "Porque permite representar relaciones entre recursos de forma clara.",
+        "Porque convierte URIs en literales."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es la mejor descripción de Apache Jena?",
+      "options": [
+        "Un motor relacional SQL.",
+        "Un lenguaje de programación.",
+        "Un sistema operativo.",
+        "Un framework Java para trabajar con RDF, SPARQL y ontologías."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué listStatements() puede ser poco recomendable en modelos grandes?",
+      "options": [
+        "Porque recorre todas las sentencias y puede ser ineficiente.",
+        "Porque elimina duplicados.",
+        "Porque no devuelve objetos literales.",
+        "Porque convierte URIs en nulos."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Una alumna usa getRequiredProperty en una propiedad inexistente esperando null. ¿Qué error comete?",
+      "options": [
+        "El método devuelve siempre un Resource.",
+        "El método elimina el recurso.",
+        "El método crea un literal vacío.",
+        "El método lanza excepción si la propiedad no existe."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Quieres crear un modelo RDF vacío en memoria con Jena. ¿Qué clase usarías?",
+      "options": [
+        "ModelFactory.",
+        "ResourceImpl.",
+        "LiteralImpl.",
+        "SPARQLQuery."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Una alumna piensa que Turtle y N-Triples son equivalentes porque ambos son legibles. ¿Qué detalle pasa por alto?",
+      "options": [
+        "N-Triples no soporta prefijos, Turtle sí.",
+        "N-Triples no admite URIs.",
+        "Turtle solo funciona en JSON.",
+        "Turtle no permite literales."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
