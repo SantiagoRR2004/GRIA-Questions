@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál es el tipo de elemento sobre el que se centra el análisis morfológico?",
+      "options": [
+        "Palabra.",
+        "Frase.",
+        "Caracter.",
+        "Ninguna de las otras opciones."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué nivel de análisis lingüístico se encarga de la estructura de las oraciones?",
+      "options": [
+        "Sintáctico.",
+        "Semántico.",
+        "Discursivo.",
+        "Estructural."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué tipo de representaciones computacionales del significado se utilizan en PLN?",
+      "options": [
+        "Discretas.",
+        "Dependientes.",
+        "Continuas.",
+        "Discontinuas."
+      ],
+      "correct_options": [0, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es la tarea de PLN que se suele usar para preentrenar modelos de aprendizaje automático?",
+      "options": [
+        "Análisis semántico.",
+        "Etiquetado morfosintáctico.",
+        "Modelado de lenguaje.",
+        "Desambiguación semántica."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    }
+  ]
+}
