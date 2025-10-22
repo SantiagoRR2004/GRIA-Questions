@@ -2,23 +2,13 @@
   "questions": [
     {
       "question": "When converting an image from NumPy (H×W×C) to PyTorch, what is the correct target shape for standard CNNs?",
-      "options": [
-        "H×W×C.",
-        "C×H×W.",
-        "1×H×W×C.",
-        "H×C×W."
-      ],
+      "options": ["H×W×C.", "C×H×W.", "1×H×W×C.", "H×C×W."],
       "correct_option": 1,
       "questionType": "singleChoice"
     },
     {
       "question": "The minimum number of point correspondences needed to estimate a homography (DLT) is:",
-      "options": [
-        "3.",
-        "4.",
-        "5.",
-        "8."
-      ],
+      "options": ["3.", "4.", "5.", "8."],
       "correct_option": 1,
       "questionType": "singleChoice"
     },
@@ -101,12 +91,7 @@
     },
     {
       "question": "In the exercises, which transformation preserves parallel lines but not lengths/angles in general?",
-      "options": [
-        "Projective.",
-        "Affine.",
-        "Similarity.",
-        "Non-rigid."
-      ],
+      "options": ["Projective.", "Affine.", "Similarity.", "Non-rigid."],
       "correct_option": 1,
       "questionType": "singleChoice"
     }
