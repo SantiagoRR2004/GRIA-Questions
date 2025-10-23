@@ -1,0 +1,114 @@
+{
+  "questions": [
+    {
+      "question": "Un estudiante usa split() para tokenizar una oración y obtiene resultados incorrectos. ¿Cuál es la causa más probable?",
+      "options": [
+        "split() no separa signos de puntuación ni trata abreviaturas correctamente.",
+        "split() convierte todo el texto a minúsculas.",
+        "split() elimina las palabras vacías automáticamente.",
+        "split() traduce los tokens al inglés."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Imagina que un estudiante hace web scraping de Wikipedia sin especificar un \"User-Agent\". ¿Qué podría ocurrir?",
+      "options": [
+        "Se almacenan los datos en caché automáticamente.",
+        "El texto se descargará sin etiquetas HTML.",
+        "Puede obtener resultados duplicados.",
+        "El servidor puede bloquear la petición o rechazar la conexión."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Supón que tienes dos documentos: \"El perro mordió a su dueño\" y \"Su perro mordió al dueño\". ¿Cuál es la principal limitación de la representación bag of words en este caso?",
+      "options": [
+        "No se puede usar con trigramas.",
+        "Calcula incorrectamente la frecuencia de las palabras.",
+        "Pierde el orden de las palabras, por lo que los significados pueden ser diferentes.",
+        "Solo considera palabras raras."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué sucede si en Whoosh sumamos los scores TF-IDF de los términos de la query sin normalizar?",
+      "options": [
+        "El ranking siempre es exacto.",
+        "Se calcula la similitud coseno automáticamente.",
+        "Los términos raros pierden importancia.",
+        "Documentos largos pueden obtener un score más alto aunque no sean más relevantes."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Supón que queremos usar trigramas en lugar de unigramas. ¿Qué efecto tiene sobre la representación del texto?",
+      "options": [
+        "Convierte el texto en minúsculas.",
+        "Reduce el número de columnas en la matriz TF-IDF.",
+        "Ignora palabras muy frecuentes automáticamente.",
+        "Cada vector captura secuencias de 3 palabras consecutivas, lo que refleja mejor el contexto."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es la principal ventaja de usar similitud coseno sobre la suma de scores TF-IDF?",
+      "options": [
+        "Ignora los términos frecuentes.",
+        "Normaliza por la longitud del documento y considera la distribución de los términos.",
+        "Es más fácil de calcular que la suma de scores.",
+        "Solo funciona con matrices dispersas."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué pasos son importantes para preprocesar documentos antes de crear un bag of words?",
+      "options": [
+        "Eliminar comas.",
+        "Separar palabras por espacios.",
+        "Eliminar palabras raras automáticamente.",
+        "Convertir a mayúsculas."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuáles son limitaciones de sumar scores TF-IDF en Whoosh sin normalizar?",
+      "options": [
+        "Ignora las palabras raras.",
+        "Un término frecuente puede dominar el score.",
+        "La similitud coseno se calcula automáticamente.",
+        "Documentos cortos pueden obtener puntuaciones más altas aunque no sean más relevantes."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué TF-IDF es mejor que solo TF para medir similitud entre documentos?",
+      "options": [
+        "Evita identificar documentos realmente similares.",
+        "Da menos peso a términos raros.",
+        "Ignora los documentos largos.",
+        "Reduce el efecto de términos comunes."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Si un texto contiene \"correr\", \"corriendo\" y \"corrí\", ¿por qué aplicar stemming mejora el análisis?",
+      "options": [
+        "Porque agrupa las palabras por longitud.",
+        "Porque reduce las palabras a su raíz común y unifica sus variantes.",
+        "Porque elimina palabras con tilde.",
+        "Porque traduce automáticamente las formas verbales."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    }
+  ]
+}
