@@ -2,12 +2,7 @@
   "questions": [
     {
       "question": "The Nyquist sampling criterion for a 1D sinusoid of frequency f_max (cycles/pixel) requires a sampling rate of at least:",
-      "options": [
-        "f_max.",
-        "2f_max.",
-        "f_max/2.",
-        "4f_max."
-      ],
+      "options": ["f_max.", "2f_max.", "f_max/2.", "4f_max."],
       "correct_option": 1,
       "questionType": "singleChoice"
     },
