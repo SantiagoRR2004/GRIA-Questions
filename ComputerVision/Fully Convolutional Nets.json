@@ -1,6 +1,4 @@
 {
-  "lesson": 5,
-  "title": "Lección 5",
   "questions": [
     {
       "question": "What key change converts a classifier into a fully convolutional network (FCN) for dense prediction?",
@@ -114,3 +112,4 @@
     }
   ]
 }
+
