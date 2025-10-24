@@ -1,0 +1,115 @@
+{
+  "questions": [
+    {
+      "question": "Why do CNNs use convolutions instead of fully connected layers on images (main benefit)?",
+      "options": [
+        "Only faster GPU multiplication.",
+        "Enforces spatial invariance via max-pooling.",
+        "Local connectivity + weight sharing → far fewer parameters and translation bias.",
+        "Allows larger batch sizes."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does 'translation equivariance' of convolution mean?",
+      "options": [
+        "If input shifts, output becomes invariant.",
+        "If input shifts, the feature map shifts similarly (before pooling/stride).",
+        "The network becomes robust to rotations.",
+        "It reduces parameters by 50%."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why does residual learning help very deep networks?",
+      "options": [
+        "Decreases memory usage.",
+        "Completely eliminates vanishing gradients.",
+        "Provides an identity path so the block learns a small residual correction.",
+        "Makes BN unnecessary."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "BatchNorm during training vs inference:",
+      "options": [
+        "Training uses batch mean/variance; inference uses running (moving) statistics.",
+        "Training and inference both use batch statistics.",
+        "Training uses running statistics; inference uses batch statistics.",
+        "Neither uses moving averages."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Main reason ReLU helps gradient flow compared to sigmoid/tanh:",
+      "options": [
+        "ReLU has larger kernels.",
+        "The derivative is 1 for positive inputs (no saturation on that side).",
+        "ReLU reduces parameter count.",
+        "ReLU guarantees zero training loss."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why use He (Kaiming) initialization with ReLU networks?",
+      "options": [
+        "To force activations centered at zero.",
+        "To preserve activation/gradient variance across layers with rectifiers.",
+        "To make learning rate tuning unnecessary.",
+        "To avoid using BN."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Global Average Pooling (GAP) at the end of a CNN mainly:",
+      "options": [
+        "Increases spatial resolution of logits.",
+        "Aggregates spatial info into channel descriptors → fewer parameters before classifier.",
+        "Replaces convolutions.",
+        "Acts as data augmentation."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In a BasicBlock (ResNet-18/34), the residual output is computed as:",
+      "options": [
+        "y = Conv3x3(x) + x (no BN/ReLU).",
+        "y = F(x) + x where F is two 3×3 convs with BN and ReLU after the first conv.",
+        "y = F(x) only (no skip).",
+        "y = ReLU(x)."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the BottleneckBlock used by ResNet-50/101/152, the convolution sequence is:",
+      "options": [
+        "3×3 → 1×1 → 3×3.",
+        "1×1 → 3×3 → 1×1.",
+        "Only 1×1 (depthwise).",
+        "Only 3×3."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A projection shortcut (1×1 conv) is required in a residual layer when:",
+      "options": [
+        "You want to downsample the tensor spatially without changing channels.",
+        "stride ≠ 1 or the number of channels changes.",
+        "For every block regardless of shape.",
+        "Only when using pre-activation."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    }
+  ]
+}
+
