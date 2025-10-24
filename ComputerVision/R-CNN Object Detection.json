@@ -46,12 +46,7 @@
     },
     {
       "question": "In extract_region_features, regions are warped to a fixed size before the CNN. What size does the lab code use with ResNet-50?",
-      "options": [
-        "(227, 227).",
-        "(256, 256).",
-        "(112, 112).",
-        "(224, 224)."
-      ],
+      "options": ["(227, 227).", "(256, 256).", "(112, 112).", "(224, 224)."],
       "correct_option": 3,
       "questionType": "singleChoice"
     },
@@ -68,4 +63,3 @@
     }
   ]
 }
-
