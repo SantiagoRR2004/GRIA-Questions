@@ -57,12 +57,7 @@
     },
     {
       "question": "In your slides, which variant typically gives sharper boundaries?",
-      "options": [
-        "FCN-32s.",
-        "FCN-16s.",
-        "FCN-8s.",
-        "All are the same."
-      ],
+      "options": ["FCN-32s.", "FCN-16s.", "FCN-8s.", "All are the same."],
       "correct_option": 2,
       "questionType": "singleChoice"
     },
@@ -112,4 +107,3 @@
     }
   ]
 }
-
