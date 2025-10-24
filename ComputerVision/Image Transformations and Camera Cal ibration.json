@@ -7,7 +7,7 @@
       "questionType": "singleChoice"
     },
     {
-      "question": "The minimum number of point correspondences needed to estimate a homography (DLT) is:",
+      "question": "The minimum number of point correspondences needed to estimate a homography (DLT) is:",0
       "options": ["3.", "4.", "5.", "8."],
       "correct_option": 1,
       "questionType": "singleChoice"
@@ -93,6 +93,606 @@
       "question": "In the exercises, which transformation preserves parallel lines but not lengths/angles in general?",
       "options": ["Projective.", "Affine.", "Similarity.", "Non-rigid."],
       "correct_option": 1,
+      "questionType": "singleChoice"
+    }
+  ]
+}
+{
+  "questions": [
+    {
+      "question": "When converting an image from NumPy (H×W×C) to PyTorch, what is the correct target shape for standard CNNs?",
+      "options": ["H×W×C.", "C×H×W.", "1×H×W×C.", "H×C×W."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The minimum number of point correspondences needed to estimate a homography (DLT) is:",
+      "options": ["3.", "4.", "5.", "8."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A similarity transform includes which of the following components?",
+      "options": [
+        "Non-uniform scale, shear, translation.",
+        "Uniform scale, rotation, translation.",
+        "Projective warp, shear only.",
+        "Rotation only."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Lab 1, what OpenCV function is used to apply a full 3×3 homogeneous transform to an image?",
+      "options": [
+        "cv2.warpAffine.",
+        "cv2.perspectiveTransform.",
+        "cv2.warpPerspective.",
+        "cv2.remap."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which OpenCV call refines detected checkerboard corners to sub-pixel accuracy during calibration?",
+      "options": [
+        "cv2.cornerSubPix.",
+        "cv2.goodFeaturesToTrack.",
+        "cv2.cornerHarris.",
+        "cv2.minEigenVal."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the calibration code, objpoints and imgpoints are respectively:",
+      "options": [
+        "2D points & 3D points.",
+        "3D grid points & detected 2D image corners.",
+        "Distorted points & undistorted points.",
+        "Pixel coords & normalized coords."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A common use of HSV over RGB in vision tasks is to:",
+      "options": [
+        "Reduce image size.",
+        "Separate chromatic content from intensity for robust thresholding.",
+        "Encode depth.",
+        "Reduce noise by Gaussian blur."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In global histogram equalization (from scratch in the demo), the mapping uses:",
+      "options": [
+        "Mean of the histogram only.",
+        "The cumulative distribution function (CDF).",
+        "The median intensity only.",
+        "Laplacian filter response."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "CLAHE (adaptive histogram equalization) limits contrast locally to:",
+      "options": [
+        "Reduce noise amplification/saturation in tiles.",
+        "Increase hue accuracy.",
+        "Remove lens distortion.",
+        "Guarantee uniform edges."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the exercises, which transformation preserves parallel lines but not lengths/angles in general?",
+      "options": ["Projective.", "Affine.", "Similarity.", "Non-rigid."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The Nyquist sampling criterion for a 1D sinusoid of frequency f_max (cycles/pixel) requires a sampling rate of at least:",
+      "options": ["f_max.", "2f_max.", "f_max/2.", "4f_max."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Aliasing occurs when:",
+      "options": [
+        "The sensor is noisy.",
+        "Sampling rate < 2f_max.",
+        "The image has low contrast.",
+        "16-bit images are used."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A simple way to reduce aliasing before downsampling is:",
+      "options": [
+        "Increase brightness.",
+        "Apply a low-pass filter (Gaussian).",
+        "Histogram equalization.",
+        "Sharpen the image."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Convolution vs correlation: true convolution differs because:",
+      "options": [
+        "It adds bias.",
+        "It flips the kernel before sliding.",
+        "It uses padding.",
+        "It only works on grayscale."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Separable filters (e.g., Gaussian) are efficient because:",
+      "options": [
+        "They use FFT.",
+        "They use integral images.",
+        "They factor a 2D kernel into vertical/horizontal 1D passes.",
+        "They skip padding."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The Sobel operator estimates:",
+      "options": [
+        "Only texture orientation.",
+        "First-order image gradients in x and y.",
+        "Second derivatives.",
+        "Binary edges directly."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Non-maximum suppression in Canny is used to:",
+      "options": [
+        "Threshold gradients.",
+        "Thin edges by keeping local maxima along the gradient direction.",
+        "Smooth edges.",
+        "Connect edges via hysteresis."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Canny, 'double threshold + hysteresis' ensures that:",
+      "options": [
+        "Only the strongest edges remain, isolated.",
+        "Weak edges connected to strong ones are kept, others discarded.",
+        "All weak edges are removed.",
+        "Thresholds are computed automatically."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Morphological opening (erosion then dilation) is best for:",
+      "options": [
+        "Removing small bright noise while preserving object shape.",
+        "Filling small holes in objects.",
+        "Edge detection.",
+        "Contrast stretching."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In frequency analysis (FFT magnitude), high-frequency components typically correspond to:",
+      "options": [
+        "Smooth regions.",
+        "Only lighting changes.",
+        "Edges and fine textures.",
+        "Only sensor noise."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why do CNNs use convolutions instead of fully connected layers on images (main benefit)?",
+      "options": [
+        "Only faster GPU multiplication.",
+        "Enforces spatial invariance via max-pooling.",
+        "Local connectivity + weight sharing → far fewer parameters and translation bias.",
+        "Allows larger batch sizes."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does 'translation equivariance' of convolution mean?",
+      "options": [
+        "If input shifts, output becomes invariant.",
+        "If input shifts, the feature map shifts similarly (before pooling/stride).",
+        "The network becomes robust to rotations.",
+        "It reduces parameters by 50%."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why does residual learning help very deep networks?",
+      "options": [
+        "Decreases memory usage.",
+        "Completely eliminates vanishing gradients.",
+        "Provides an identity path so the block learns a small residual correction.",
+        "Makes BN unnecessary."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "BatchNorm during training vs inference:",
+      "options": [
+        "Training uses batch mean/variance; inference uses running (moving) statistics.",
+        "Training and inference both use batch statistics.",
+        "Training uses running statistics; inference uses batch statistics.",
+        "Neither uses moving averages."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Main reason ReLU helps gradient flow compared to sigmoid/tanh:",
+      "options": [
+        "ReLU has larger kernels.",
+        "The derivative is 1 for positive inputs (no saturation on that side).",
+        "ReLU reduces parameter count.",
+        "ReLU guarantees zero training loss."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why use He (Kaiming) initialization with ReLU networks?",
+      "options": [
+        "To force activations centered at zero.",
+        "To preserve activation/gradient variance across layers with rectifiers.",
+        "To make learning rate tuning unnecessary.",
+        "To avoid using BN."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Global Average Pooling (GAP) at the end of a CNN mainly:",
+      "options": [
+        "Increases spatial resolution of logits.",
+        "Aggregates spatial info into channel descriptors → fewer parameters before classifier.",
+        "Replaces convolutions.",
+        "Acts as data augmentation."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In a BasicBlock (ResNet-18/34), the residual output is computed as:",
+      "options": [
+        "y = Conv3x3(x) + x (no BN/ReLU).",
+        "y = F(x) + x where F is two 3×3 convs with BN and ReLU after the first conv.",
+        "y = F(x) only (no skip).",
+        "y = ReLU(x)."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the BottleneckBlock used by ResNet-50/101/152, the convolution sequence is:",
+      "options": [
+        "3×3 → 1×1 → 3×3.",
+        "1×1 → 3×3 → 1×1.",
+        "Only 1×1 (depthwise).",
+        "Only 3×3."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A projection shortcut (1×1 conv) is required in a residual layer when:",
+      "options": [
+        "You want to downsample the tensor spatially without changing channels.",
+        "stride ≠ 1 or the number of channels changes.",
+        "For every block regardless of shape.",
+        "Only when using pre-activation."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In dense prediction, what must the network preserve or reconstruct that a classifier discards?",
+      "options": [
+        "Only global label distribution.",
+        "Pixel-by-pixel spatial structure (outputs per location).",
+        "Only channel count, not spatial size.",
+        "Only the image aspect ratio."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What key problem does the encoder-decoder pattern solve?",
+      "options": [
+        "Eliminates the need for normalization layers.",
+        "Increases parameter count for better accuracy.",
+        "Balances global semantics with local detail to produce full-resolution outputs.",
+        "Ensures the model never downsamples features."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What do skip connections in U-Net mainly do?",
+      "options": [
+        "Reduce memory usage.",
+        "Pass high-resolution features from encoder to decoder to restore detail.",
+        "Replace the need for upsampling.",
+        "Prevent overfitting by dropping features randomly."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why use 3×3 convs with padding=1 in DoubleConv?",
+      "options": [
+        "To reduce the number of parameters.",
+        "To preserve spatial dimensions (H×W) through the block.",
+        "To implement anti-aliasing.",
+        "To enforce channel grouping."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A common trade-off between ConvTranspose2d and bilinear-upsample+conv is:",
+      "options": [
+        "ConvTranspose2d is not trainable; bilinear is trainable.",
+        "ConvTranspose2d is always artifact-free.",
+        "Bilinear+conv is stable; ConvTranspose2d is trainable but can cause checkerboard artifacts.",
+        "Bilinear+conv can only upsample by factors of 4."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the main role of the bottleneck in U-Net?",
+      "options": [
+        "Enforce output calibration.",
+        "Provide the deepest, most semantic features at lowest resolution.",
+        "Convert logits to probabilities.",
+        "Reduce training time by freezing gradients."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When might Dice or Focal loss be preferred over plain BCE in binary segmentation?",
+      "options": [
+        "When outputs are already probabilities.",
+        "For severe foreground/background imbalance and overlap quality.",
+        "Only when labels are multi-class.",
+        "When you cannot compute gradients."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why use BCEWithLogitsLoss on raw logits but apply sigmoid before Dice/IoU?",
+      "options": [
+        "BCEWithLogitsLoss requires probabilities.",
+        "BCEWithLogitsLoss expects logits; Dice/IoU need probabilities or masks.",
+        "Dice/IoU require logits; BCEWithLogitsLoss needs masks.",
+        "All require softmax."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which sequence correctly implements DoubleConv while preserving H×W?",
+      "options": [
+        "Conv2d(k=3,p=0) → ReLU → Conv2d(k=3,p=0) → ReLU.",
+        "Conv2d(k=1) → BN → ReLU → Conv2d(k=1) → BN → ReLU.",
+        "Conv2d(k=3,p=1) → BN → ReLU → Conv2d(k=3,p=1) → BN → ReLU.",
+        "Conv2d(k=5,p=0) → BN → ReLU → MaxPool2d."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What should EncoderBlock.forward return and why?",
+      "options": [
+        "(pooled, pooled) to save memory.",
+        "(features, pooled) to keep high-res features for skip and downsampled for next stage.",
+        "(features, features) to avoid pooling.",
+        "Only pooled since features are reconstructed later."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What key change converts a classifier into a fully convolutional network (FCN) for dense prediction?",
+      "options": [
+        "Use GELU instead of ReLU.",
+        "Replace fully connected layers with convolutions (e.g., 1×1 convs) on the feature map.",
+        "Remove BatchNorm layers.",
+        "Switch only to grayscale inputs."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why can an FCN accept arbitrary input image sizes?",
+      "options": [
+        "It always resizes inputs to a fixed crop.",
+        "Convolutions are translationally invariant.",
+        "It removes fixed-size FC layers and uses only convolutions, which operate on grids of any size.",
+        "It uses larger kernels."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In segmentation, a 1×1 convolution on a feature map acts as:",
+      "options": [
+        "A spatial smoothing filter.",
+        "A downsampler.",
+        "A per-pixel classifier mapping channels → class logits.",
+        "A non-linearity."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the main limitation of FCN-32s compared to FCN-16s/8s?",
+      "options": [
+        "FCN-32s cannot be trained end-to-end.",
+        "It produces blurrier boundaries because it upsamples from very coarse features (stride-32).",
+        "It uses 3× more parameters.",
+        "It cannot run on GPUs."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why do skip connections help (FCN-16s/8s)?",
+      "options": [
+        "They reduce the number of parameters.",
+        "They eliminate the need for upsampling.",
+        "They fuse high-resolution shallow cues ('where') with deep semantic cues ('what').",
+        "They replace BatchNorm."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In your slides, which variant typically gives sharper boundaries?",
+      "options": [
+        "FCN-32s.",
+        "FCN-16s.",
+        "FCN-8s.",
+        "All are the same."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Before adding two tensors from different stages (e.g., upsampled conv5 with pool4 scores), you must:",
+      "options": [
+        "Apply softmax to both.",
+        "Match their spatial sizes (H×W), e.g., with F.interpolate bilinear.",
+        "Convert them to probabilities with sigmoid.",
+        "Normalize each to unit norm."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Fill in the in_channels for the score layers pool3, pool4, and conv5 in FCN-8s using ResNet-50 features: self.score_pool3 = nn.Conv2d(____, n_classes, kernel_size=1); self.score_pool4 = nn.Conv2d(____, n_classes, kernel_size=1); self.score_fr = nn.Conv2d(____, n_classes, kernel_size=1)",
+      "options": [
+        "256, 512, 1024.",
+        "512, 1024, 2048.",
+        "1024, 2048, 4096.",
+        "64, 128, 256."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Fill in the line to make upscore2 match score_pool4 before addition: upscore2 = self.upscore2(score_fr); if upscore2.shape != score_pool4.shape: upscore2 = ________________; fuse_pool4 = upscore2 + score_pool4",
+      "options": [
+        "F.interpolate(upscore2, size=score_pool4.shape[2:], mode='bilinear', align_corners=False).",
+        "torch.cat([upscore2, score_pool4], dim=1).",
+        "F.max_pool2d(upscore2, kernel_size=2).",
+        "upscore2[:, :score_pool4.size(1), ...]."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Choose a correct transpose conv to upsample stride-8 logits back to image size: self.upscore8 = nn.ConvTranspose2d(n_classes, n_classes, __________, __________, bias=False)",
+      "options": [
+        "kernel_size=8, stride=8.",
+        "kernel_size=16, stride=8.",
+        "kernel_size=4, stride=2.",
+        "kernel_size=32, stride=16."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the purpose of region proposals in R-CNN?",
+      "options": [
+        "Replace the CNN backbone.",
+        "Suggest a small set of candidate boxes likely to contain objects.",
+        "Perform non-maximum suppression.",
+        "Normalize class scores."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why is vanilla R-CNN slow at inference?",
+      "options": [
+        "It uses k-means for proposals.",
+        "It trains one SVM per pixel.",
+        "It runs a CNN forward pass for ~2000 proposals per image (no feature sharing).",
+        "It has too many fully connected layers."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the bounding box regressor in R-CNN do?",
+      "options": [
+        "Chooses the best proposal per class.",
+        "Refines proposal boxes using predicted offsets (t_x, t_y, t_w, t_h).",
+        "Filters low-confidence detections.",
+        "Computes IoU between boxes."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In your CNNFeatureExtractor, which line removes the final classifier to keep only convolutional features?",
+      "options": [
+        "self.features = resnet.fc.",
+        "self.features = nn.Sequential(*list(resnet.children())).",
+        "self.features = nn.Sequential(*list(resnet.children())[:-1]).",
+        "self.features = resnet.layer4."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In extract_region_features, regions are warped to a fixed size before the CNN. What size does the lab code use with ResNet-50?",
+      "options": [
+        "(227, 227).",
+        "(256, 256).",
+        "(112, 112).",
+        "(224, 224)."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Stage 1 training, what IoU thresholds label proposals as positive and negative?",
+      "options": [
+        "Positive ≥ 0.75, Negative < 0.25.",
+        "Positive ≥ 0.3, Negative < 0.1.",
+        "Positive ≥ 0.5, Negative < 0.5.",
+        "Positive ≥ 0.5, Negative < 0.1."
+      ],
+      "correct_option": 2,
       "questionType": "singleChoice"
     }
   ]
