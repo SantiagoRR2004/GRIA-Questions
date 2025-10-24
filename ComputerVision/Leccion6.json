@@ -1,0 +1,72 @@
+{
+  "lesson": 6,
+  "title": "Lección 6",
+  "questions": [
+    {
+      "question": "What is the purpose of region proposals in R-CNN?",
+      "options": [
+        "Replace the CNN backbone.",
+        "Suggest a small set of candidate boxes likely to contain objects.",
+        "Perform non-maximum suppression.",
+        "Normalize class scores."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why is vanilla R-CNN slow at inference?",
+      "options": [
+        "It uses k-means for proposals.",
+        "It trains one SVM per pixel.",
+        "It runs a CNN forward pass for ~2000 proposals per image (no feature sharing).",
+        "It has too many fully connected layers."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the bounding box regressor in R-CNN do?",
+      "options": [
+        "Chooses the best proposal per class.",
+        "Refines proposal boxes using predicted offsets (t_x, t_y, t_w, t_h).",
+        "Filters low-confidence detections.",
+        "Computes IoU between boxes."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In your CNNFeatureExtractor, which line removes the final classifier to keep only convolutional features?",
+      "options": [
+        "self.features = resnet.fc.",
+        "self.features = nn.Sequential(*list(resnet.children())).",
+        "self.features = nn.Sequential(*list(resnet.children())[:-1]).",
+        "self.features = resnet.layer4."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In extract_region_features, regions are warped to a fixed size before the CNN. What size does the lab code use with ResNet-50?",
+      "options": [
+        "(227, 227).",
+        "(256, 256).",
+        "(112, 112).",
+        "(224, 224)."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Stage 1 training, what IoU thresholds label proposals as positive and negative?",
+      "options": [
+        "Positive ≥ 0.75, Negative < 0.25.",
+        "Positive ≥ 0.3, Negative < 0.1.",
+        "Positive ≥ 0.5, Negative < 0.5.",
+        "Positive ≥ 0.5, Negative < 0.1."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    }
+  ]
+}
