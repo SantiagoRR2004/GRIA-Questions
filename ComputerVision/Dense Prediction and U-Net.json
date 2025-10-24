@@ -3,10 +3,10 @@
     {
       "question": "In dense prediction, what must the network preserve or reconstruct that a classifier discards?",
       "options": [
-        "Only global label distribution.",
-        "Pixel-by-pixel spatial structure (outputs per location).",
+        "Global label distribution only.",
+        "Pixelwise spatial structure (per-location outputs).",
         "Only channel count, not spatial size.",
-        "Only the image aspect ratio."
+        "Only the image's aspect ratio."
       ],
       "correct_option": 1,
       "questionType": "singleChoice"
@@ -14,21 +14,21 @@
     {
       "question": "What key problem does the encoder-decoder pattern solve?",
       "options": [
-        "Eliminates the need for normalization layers.",
-        "Increases parameter count for better accuracy.",
-        "Balances global semantics with local detail to produce full-resolution outputs.",
-        "Ensures the model never downsamples features."
+        "It eliminates the need for normalization layers.",
+        "It increases parameter count for better accuracy.",
+        "It balances global semantics with local detail to produce full-res outputs.",
+        "It ensures the model never downsamples features."
       ],
       "correct_option": 2,
       "questionType": "singleChoice"
     },
     {
-      "question": "What do skip connections in U-Net mainly do?",
+      "question": "What do skip connections primarily do in U-Net?",
       "options": [
         "Reduce memory usage.",
-        "Pass high-resolution features from encoder to decoder to restore detail.",
+        "Pass high-resolution encoder features to the decoder to restore detail.",
         "Replace the need for upsampling.",
-        "Prevent overfitting by dropping features randomly."
+        "Prevent overfitting by randomly dropping features."
       ],
       "correct_option": 1,
       "questionType": "singleChoice"
@@ -37,7 +37,7 @@
       "question": "Why use 3×3 convs with padding=1 in DoubleConv?",
       "options": [
         "To reduce the number of parameters.",
-        "To preserve spatial dimensions (H×W) through the block.",
+        "To preserve spatial dimensions (H×W) across the block.",
         "To implement anti-aliasing.",
         "To enforce channel grouping."
       ],
@@ -47,9 +47,9 @@
     {
       "question": "A common trade-off between ConvTranspose2d and bilinear-upsample+conv is:",
       "options": [
-        "ConvTranspose2d is not trainable; bilinear is trainable.",
+        "ConvTranspose2d is non-learnable; bilinear is learnable.",
         "ConvTranspose2d is always artifact-free.",
-        "Bilinear+conv is stable; ConvTranspose2d is trainable but can cause checkerboard artifacts.",
+        "Bilinear+conv is stable; ConvTranspose2d is learnable but can cause checkerboard artifacts.",
         "Bilinear+conv can only upsample by factors of 4."
       ],
       "correct_option": 2,
@@ -71,7 +71,7 @@
       "options": [
         "When outputs are already probabilities.",
         "For severe foreground/background imbalance and overlap quality.",
-        "Only when labels are multi-class.",
+        "Only when labels are multiclass.",
         "When you cannot compute gradients."
       ],
       "correct_option": 1,
@@ -83,7 +83,7 @@
         "BCEWithLogitsLoss requires probabilities.",
         "BCEWithLogitsLoss expects logits; Dice/IoU need probabilities or masks.",
         "Dice/IoU require logits; BCEWithLogitsLoss needs masks.",
-        "All require softmax."
+        "All three require softmax."
       ],
       "correct_option": 1,
       "questionType": "singleChoice"
@@ -103,7 +103,7 @@
       "question": "What should EncoderBlock.forward return and why?",
       "options": [
         "(pooled, pooled) to save memory.",
-        "(features, pooled) to keep high-res features for skip and downsampled for next stage.",
+        "(features, pooled) to keep high-res features for skip and downsampled for the next stage.",
         "(features, features) to avoid pooling.",
         "Only pooled since features are reconstructed later."
       ],
