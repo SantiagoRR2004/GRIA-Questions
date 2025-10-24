@@ -1,6 +1,4 @@
 {
-  "lesson": 3,
-  "title": "Lección 3",
   "questions": [
     {
       "question": "Why do CNNs use convolutions instead of fully connected layers on images (main benefit)?",
@@ -114,3 +112,4 @@
     }
   ]
 }
+
