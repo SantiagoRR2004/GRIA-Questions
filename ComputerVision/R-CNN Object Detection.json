@@ -1,6 +1,4 @@
 {
-  "lesson": 6,
-  "title": "Lección 6",
   "questions": [
     {
       "question": "What is the purpose of region proposals in R-CNN?",
@@ -70,3 +68,4 @@
     }
   ]
 }
+
