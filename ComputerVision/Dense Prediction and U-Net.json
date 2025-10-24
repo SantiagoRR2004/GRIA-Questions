@@ -1,6 +1,4 @@
 {
-  "lesson": 4,
-  "title": "Lección 4",
   "questions": [
     {
       "question": "In dense prediction, what must the network preserve or reconstruct that a classifier discards?",
@@ -114,3 +112,4 @@
     }
   ]
 }
+
