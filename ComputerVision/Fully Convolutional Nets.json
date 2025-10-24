@@ -1,0 +1,115 @@
+{
+  "questions": [
+    {
+      "question": "What key change converts a classifier into a fully convolutional network (FCN) for dense prediction?",
+      "options": [
+        "Use GELU instead of ReLU.",
+        "Replace fully connected layers with convolutions (e.g., 1×1 convs) on the feature map.",
+        "Remove BatchNorm layers.",
+        "Switch only to grayscale inputs."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why can an FCN accept arbitrary input image sizes?",
+      "options": [
+        "It always resizes inputs to a fixed crop.",
+        "Convolutions are translationally invariant.",
+        "It removes fixed-size FC layers and uses only convolutions, which operate on grids of any size.",
+        "It uses larger kernels."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In segmentation, a 1×1 convolution on a feature map acts as:",
+      "options": [
+        "A spatial smoothing filter.",
+        "A downsampler.",
+        "A per-pixel classifier mapping channels → class logits.",
+        "A non-linearity."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the main limitation of FCN-32s compared to FCN-16s/8s?",
+      "options": [
+        "FCN-32s cannot be trained end-to-end.",
+        "It produces blurrier boundaries because it upsamples from very coarse features (stride-32).",
+        "It uses 3× more parameters.",
+        "It cannot run on GPUs."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why do skip connections help (FCN-16s/8s)?",
+      "options": [
+        "They reduce the number of parameters.",
+        "They eliminate the need for upsampling.",
+        "They fuse high-resolution shallow cues ('where') with deep semantic cues ('what').",
+        "They replace BatchNorm."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In your slides, which variant typically gives sharper boundaries?",
+      "options": [
+        "FCN-32s.",
+        "FCN-16s.",
+        "FCN-8s.",
+        "All are the same."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Before adding two tensors from different stages (e.g., upsampled conv5 with pool4 scores), you must:",
+      "options": [
+        "Apply softmax to both.",
+        "Match their spatial sizes (H×W), e.g., with F.interpolate bilinear.",
+        "Convert them to probabilities with sigmoid.",
+        "Normalize each to unit norm."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Fill in the in_channels for the score layers pool3, pool4, and conv5 in FCN-8s using ResNet-50 features: self.score_pool3 = nn.Conv2d(____, n_classes, kernel_size=1); self.score_pool4 = nn.Conv2d(____, n_classes, kernel_size=1); self.score_fr = nn.Conv2d(____, n_classes, kernel_size=1)",
+      "options": [
+        "256, 512, 1024.",
+        "512, 1024, 2048.",
+        "1024, 2048, 4096.",
+        "64, 128, 256."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Fill in the line to make upscore2 match score_pool4 before addition: upscore2 = self.upscore2(score_fr); if upscore2.shape != score_pool4.shape: upscore2 = ________________; fuse_pool4 = upscore2 + score_pool4",
+      "options": [
+        "F.interpolate(upscore2, size=score_pool4.shape[2:], mode='bilinear', align_corners=False).",
+        "torch.cat([upscore2, score_pool4], dim=1).",
+        "F.max_pool2d(upscore2, kernel_size=2).",
+        "upscore2[:, :score_pool4.size(1), ...]."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Choose a correct transpose conv to upsample stride-8 logits back to image size: self.upscore8 = nn.ConvTranspose2d(n_classes, n_classes, __________, __________, bias=False)",
+      "options": [
+        "kernel_size=8, stride=8.",
+        "kernel_size=16, stride=8.",
+        "kernel_size=4, stride=2.",
+        "kernel_size=32, stride=16."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
+
