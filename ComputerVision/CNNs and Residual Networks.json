@@ -41,7 +41,7 @@
         "Training uses running stats; inference uses batch stats.",
         "Neither uses moving averages."
       ],
-      "correct_option": 2,
+      "correct_option": 0,
       "questionType": "singleChoice"
     },
     {
