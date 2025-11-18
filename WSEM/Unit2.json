@@ -1,0 +1,116 @@
+{
+  "questions": [
+    {
+      "question": "¿Qué ventaja ofrece usar recursos y propiedades con URIs en lugar de texto literal?",
+      "options": [
+        "Permite escribir menos código Java.",
+        "Agrega automáticamente índices TDB.",
+        "Ordena los resultados antes de consultar.",
+        "Permite razonamiento y reutilización semántica en el grafo."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+        {
+      "question": "Si se elimina la línea que declara `ensehna` como subPropertyOf `participaEn`, ¿qué efecto se observará en los resultados?",
+      "options": [
+        "Se producirá un error de compilación.",
+        "El modelo borrará automáticamente la propiedad ensehna.",
+        "Ya no se podrá inferir que quien enseña también participa.",
+        "El razonador convertirá ensehna en clase."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes acciones genera el modelo razonado correctamente?",
+      "options": [
+        "reasoner.apply(model);",
+        "InfModel inf",
+        "Model inf",
+        "ModelFactory.createInfModel(reasoner, model);",
+        "ModelFactory.useReasoner(reasoner, model);",
+        "new InfModel(model);"
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Si se añade `mr.addProperty(ensehna, ws)`, ¿por qué el razonador concluye que `mr participaEn ws`?",
+      "options": [
+        "Porque 'ensehna' fue declarada como subPropertyOf de 'participaEn'.",
+        "Porque 'participaEn' es el nombre más general alfabéticamente.",
+        "Porque el modelo convierte automáticamente todas las propiedades en equivalentes.",
+        "Porque el razonador aplica OWL y no RDFS."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Si una consulta SPARQL ejecutada en Jena produce un error de prefijos, ¿cuál puede ser la causa directa?",
+      "options": [
+        "La consulta no contiene cláusula ORDER BY.",
+        "El modelo fue cargado desde un archivo .ttl en lugar de .rdf.",
+        "Se usaron comillas dobles en lugar de simples.",
+        "Aparecen términos abreviados sin declarar el prefijo correspondiente."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Si el endpoint Fuseki responde pero no muestra datos tras cargar el archivo, ¿qué situación podría explicarlo?",
+      "options": [
+        "El archivo tenía prefijos declarados correctamente.",
+        "No se seleccionó el formato JSON en la carga.",
+        "Se ejecutó la consulta con LIMIT en lugar de OFFSET.",
+        "Se creó un dataset nuevo pero los datos se subieron a uno diferente."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué es útil ejecutar la misma consulta primero en Jena local y luego en Fuseki?",
+      "options": [
+        "Para asegurar que la consulta siempre devuelve más resultados.",
+        "Para evitar el uso de prefijos en el código.",
+        "Para verificar consistencia y detectar problemas de despliegue o carga de datos.",
+        "Para comprobar si Fuseki mejora el rendimiento de CPU del sistema operativo."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿En qué caso tiene sentido utilizar OPTIONAL dentro de una consulta SPARQL?",
+      "options": [
+        "Cuando se necesita suprimir resultados duplicados.",
+        "Cuando solo se buscan resultados booleanos.",
+        "Cuando se requiere combinar dos endpoints externos.",
+        "Cuando un valor puede existir o no para un recurso."
+      ],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "En una consulta CONSTRUCT, ¿qué decide el usuario en la parte del WHERE?",
+      "options": [
+        "Qué prefijos deben registrarse en el endpoint.",
+        "Qué sintaxis de salida tendrá el resultado.",
+        "Qué tripletas se usarán como fuente para generar nuevas tripletas.",
+        "Qué base de datos externa se va a vincular."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué código define correctamente la propiedad 'aprueba' como subpropiedad de 'participaEn'?",
+      "options": [
+        "participaEn.addProperty(RDFS.subPropertyOf, aprueba);",
+        "aprueba.addProperty(RDFS.subClassOf, participaEn);",
+        "aprueba.addProperty(RDFS.subPropertyOf, participaEn);",
+        "aprueba.addProperty(RDFS.type, participaEn);"
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    }
+  ]
+}
