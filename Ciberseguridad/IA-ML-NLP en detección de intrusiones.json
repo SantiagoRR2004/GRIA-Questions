@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "Indique qué afirmación sobre los IDS/IPS basados en comportamiento es falsa.",
+      "options": [
+        "Los IDS/IPS basados en comportamiento pueden detectar amenazas desconocidas identificando comportamientos anómalos.",
+        "Los IDS/IPS basados en comportamiento pueden generar falsos positivos, ya que pueden interpretar actividad legítima como sospechosa.",
+        "Los IDS/IPS basados en comportamiento no necesitan emplear técnicas estadísticas o de ML, ya que solo necesitan una colección de firmas/reglas de ataques conocidos.",
+        "Los IDS/IPS basados en comportamiento monitorizan el tráfico y la actividad de la red para identificar comportamientos sospechosos."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    }
+  ]
+}

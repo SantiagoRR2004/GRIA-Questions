@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál de los siguientes mecanismos puede utilizarse en autenticación continua?",
+      "options": [
+        "Solo contraseñas.",
+        "Biometría, patrones de comportamiento e información del dispositivo.",
+        "Solo nombres de usuario.",
+        "Todas son incorrectas."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    }
+  ]
+}

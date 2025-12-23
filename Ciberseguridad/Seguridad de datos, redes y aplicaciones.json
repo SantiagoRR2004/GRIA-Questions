@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál es una ventaja del cifrado simétrico sobre el cifrado asimétrico?",
+      "options": [
+        "El cifrado simétrico es generalmente más eficiente en el procesamiento de datos.",
+        "El cifrado simétrico utiliza un par de claves.",
+        "El cifrado simétrico no requiere intercambio de claves.",
+        "Todas las respuestas son correctas."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
