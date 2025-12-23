@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál es la función principal de un sistema SIEM?",
+      "options": [
+        "Prevenir ataques de malware analizando archivos ejecutables.",
+        "Cifrar las transmisiones de datos para evitar fugas de información.",
+        "Proporcionar análisis en tiempo real de alertas de seguridad generadas por aplicaciones y dispositivos de red.",
+        "Controlar el acceso a una red filtrando puertos de la capa de transporte."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    }
+  ]
+}
