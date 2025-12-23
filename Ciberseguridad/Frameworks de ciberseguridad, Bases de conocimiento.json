@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál es la principal diferencia entre CVE (Common Vulnerabilities and Exposures) y CWE (Common Weakness Enumeration)?",
+      "options": [
+        "CVE proporciona una colección de instancias específicas de vulnerabilidades, mientras que CWE proporciona una ontología que organiza tipos de vulnerabilidades.",
+        "CVE proporciona una ontología que organiza tipos de vulnerabilidades, mientras que CWE proporciona una colección de instancias específicas de vulnerabilidades.",
+        "No hay diferencia, tanto CVE como CWE proporcionan instancias específicas de vulnerabilidades.",
+        "No hay diferencia, tanto CVE como CWE proporcionan tipos de vulnerabilidades."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

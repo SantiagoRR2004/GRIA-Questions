@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "¿Qué es MITRE ATLAS?",
+      "options": [
+        "Una base de conocimiento de acceso global sobre tácticas y técnicas de adversarios basada en observaciones de ataques reales y demostraciones realistas de equipos rojos de IA y grupos de seguridad.",
+        "La versión MITRE ATT&CK para LLMs e IA.",
+        "Adversarial Threat Landscape for Artificial-Intelligence Systems.",
+        "Todas las respuestas son correctas."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    }
+  ]
+}
