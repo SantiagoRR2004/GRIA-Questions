@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuáles de estas son características del HTML frente al DOM?",
+      "options": [
+        "Sus siglas son HyperText Markup Language.",
+        "Es el código fuente original.",
+        "Es estático, inmutable.",
+        "aiohttp y requests lo pueden obtener.",
+        "Accesible desde el navegador mediante Ctrl + U.",
+        "Sus siglas son Document Object Model.",
+        "Obtenida a través de la ejecución del código fuente.",
+        "Es dinámico, puede cambiar periódicamente o tras acciones.",
+        "Accesible desde el navegador mediante F12."
+      ],
+      "correct_options": [0, 1, 2, 3, 4],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuáles de estas son características del DOM frente al HTML?",
+      "options": [
+        "Sus siglas son HyperText Markup Language.",
+        "Es el código fuente original.",
+        "Es estático, inmutable.",
+        "aiohttp y requests lo pueden obtener.",
+        "Accesible desde el navegador mediante Ctrl + U.",
+        "Sus siglas son Document Object Model.",
+        "Obtenida a través de la ejecución del código fuente.",
+        "Es dinámico, puede cambiar periódicamente o tras acciones.",
+        "Accesible desde el navegador mediante F12."
+      ],
+      "correct_options": [5, 6, 7, 8],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cómo se llaman los PDFs que solo son imágenes?",
+      "options": [
+        "Nativos.",
+        "Rasterizados.",
+        "Vectoriales.",
+        "Renderizados.",
+        "Monocolumna."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál de las siguientes codificaciones tiene el acento agudo combinante (U+0301)?",
+      "options": ["ASCII.", "Windows-1252.", "UTF-8 NFC.", "UTF-8 NFD."],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál de los siguientes permite navegar hacia elementos superiores en un HTML?",
+      "options": [
+        "XPATH.",
+        "CSS.",
+        "Tesseract.",
+        "XLM-RoBERTa.",
+        "BeautifulSoup.",
+        "Selectolax."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
