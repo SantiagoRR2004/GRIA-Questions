@@ -1,0 +1,10 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál de los siguientes formatos es un tipo de dato textural no estructurado?",
+      "options": ["PDF.", "JSON.", "CSV.", "YAML.", "XML.", "HTML."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
