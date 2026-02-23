@@ -1,0 +1,10 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál de estos modelos de embeddings se adapta a la polisemia?",
+      "options": ["Word2Vec.", "Skip-gram.", "CBOW", "BERT."],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    }
+  ]
+}
