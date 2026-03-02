@@ -5,6 +5,59 @@
       "options": ["Word2Vec.", "Skip-gram.", "CBOW", "BERT."],
       "correct_option": 3,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cómo se calcula el Recall@K?",
+      "options": [
+        "TP@K / (TP + FN).",
+        "TP@K / (TP + FP).",
+        "TP@K / K.",
+        "(TP + FN) / K.",
+        "K / TP@K."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué se usa Matryoshka representation learning (MRL) para comparar embeddings?",
+      "options": [
+        "Se puede comparar la versión menos extensa de los embeddings.",
+        "Se puede usar una transformación lineal para comparar los embeddings.",
+        "Permite evaluar relaciones entre representaciones de distinta granularidad.",
+        "Facilita la reducción de dimensionalidad sin perder información relevante.",
+        "Ayuda a alinear embeddings de diferentes modelos para comparaciones más precisas."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué suele ocurrir cuando se cuantiza de float32 a int8 un modelo de embeddings?",
+      "options": [
+        "Se necesita 1/4 del espacio de almacenamiento original.",
+        "Se necesita 1/2 del espacio de almacenamiento original.",
+        "Se necesita 1/8 del espacio de almacenamiento original.",
+        "Se necesita 1/16 del espacio de almacenamiento original.",
+        "Se necesita 1/32 del espacio de almacenamiento original.",
+        "Aumenta la velocidad ×2-4.",
+        "Aumenta la velocidad ×4-8.",
+        "Aumenta la velocidad ×8-16.",
+        "Aumenta la velocidad ×16-32.",
+        "Se reduce la precisión.",
+        "Aumenta la precisión."
+      ],
+      "correct_options": [0, 5, 9],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuál es la mejor técnica de reducción de dimensionalidad para la visualización de embeddings de BERT?",
+      "options": [
+        "UMAP (Uniform Manifold Approximation and Projection).",
+        "PCA (Principal Component Analysis).",
+        "t-SNE (t-Distributed Stochastic Neighbor Embedding).",
+        "LDA (Linear Discriminant Analysis)."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
