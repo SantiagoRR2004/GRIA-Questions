@@ -1,0 +1,63 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuáles son las fases de BERTopic?",
+      "options": [
+        "Embeddings. -> Reducción de dimensionalidad. -> Clustering. -> Tokenización. -> Representación.",
+        "Embeddings. -> Clustering. -> Reducción de dimensionalidad. -> Tokenización. -> Representación.",
+        "Tokenización. -> Embeddings. -> Reducción de dimensionalidad. -> Clustering. -> Representación.",
+        "Tokenización. -> Embeddings. -> Clustering. -> Reducción de dimensionalidad. -> Representación.",
+        "Clustering. -> Tokenización. -> Embeddings. -> Reducción de dimensionalidad. -> Representación."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuáles de estos no son hiperparámetros de Uniform Manifold Approximation and Projection?",
+      "options": [
+        "n_neighbors.",
+        "n_components.",
+        "metric.",
+        "min_dist.",
+        "random_state.",
+        "repulsion_strength.",
+        "svd_solver.",
+        "perplexity.",
+        "min_samples.",
+        "min_cluster_size.",
+        "cluster_selection_epsilon."
+      ],
+      "correct_options": [6, 7, 8, 9, 10],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuáles de estos no son hiperparámetros de Hierarchical Density-Based Spatial Clustering of Applications with Noise?",
+      "options": [
+        "n_neighbors.",
+        "n_components.",
+        "metric.",
+        "min_dist.",
+        "random_state.",
+        "repulsion_strength.",
+        "svd_solver.",
+        "perplexity.",
+        "min_samples.",
+        "min_cluster_size.",
+        "cluster_selection_epsilon."
+      ],
+      "correct_options": [0, 1, 3, 4, 5, 6, 7],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cómo se calcula la distancia de accesibilidad mutua (MRD) de HDBSCAN de dos instancias?",
+      "options": [
+        "El máximo de la distancia al k vecino más cercano de cada instancia y la distancia entre ellas.",
+        "El mínimo del límite de vecindad y la distancia entre ellas.",
+        "La distancia mínima pasando por el mayor número de vecinos que sea menor que la distancia entre ellas.",
+        "La media de la diferencia absoluta de las distancias al resto de instancias."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

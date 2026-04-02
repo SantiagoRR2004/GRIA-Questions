@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuáles son las fases de un sistema de resumen extractivo?",
+      "options": [
+        "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección. -> Reordenado cronológico.",
+        "Segmentación y vectorización. -> Construcción de la topología. -> Reordenado cronológico. -> Ranking. -> Selección.",
+        "Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección.",
+        "Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Selección. -> Ranking.",
+        "Ranking. -> Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Selección.",
+        "Segmentación y vectorización. -> Reducción de dimensionalidad. -> Reordenado cronológico. -> Ranking. -> Selección.",
+        "Segmentación y vectorización. -> Construcción de la topología. -> Reordenado cronológico. -> Clustering. -> Selección.",
+        "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Clustering. -> Reordenado cronológico."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
