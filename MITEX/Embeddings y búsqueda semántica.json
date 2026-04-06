@@ -1,6 +1,20 @@
 {
   "questions": [
     {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? Conocerás una palabra por la compañía que frecuenta. / Las palabras que aparecen en los mismos entornos lingüísticos tienden a tener significados similares.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 4,
+      "questionType": "singleChoice"
+    },
+    {
       "question": "¿Cuál de estos modelos de embeddings se adapta a la polisemia?",
       "options": ["Word2Vec.", "Skip-gram.", "CBOW", "BERT."],
       "correct_option": 3,

@@ -1,9 +1,133 @@
 {
   "questions": [
     {
+      "question": "¿Cuál es el objetivo del Procesamiento del Lenguaje Natural?",
+      "options": [
+        "Estudiar cómo analizar, comprender, modelar y generar el lenguaje humano, considerando su léxico, sintaxis, semántica y pragmática.",
+        "Buscar y recuperar documentos o fragmentos relevantes para una consulta dentro de una colección grande de textos.",
+        "Descubrir conocimiento (en base a patrones) a partir de un conjunto masivo de textos.",
+        "Traducir y comprobar la calidad de las traducciones no directas entre diferentes idiomas."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es el objetivo de la Recuperación de Información?",
+      "options": [
+        "Estudiar cómo analizar, comprender, modelar y generar el lenguaje humano, considerando su léxico, sintaxis, semántica y pragmática.",
+        "Buscar y recuperar documentos o fragmentos relevantes para una consulta dentro de una colección grande de textos.",
+        "Descubrir conocimiento (en base a patrones) a partir de un conjunto masivo de textos.",
+        "Traducir y comprobar la calidad de las traducciones no directas entre diferentes idiomas."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es el objetivo de Minería de Textos?",
+      "options": [
+        "Estudiar cómo analizar, comprender, modelar y generar el lenguaje humano, considerando su léxico, sintaxis, semántica y pragmática.",
+        "Buscar y recuperar documentos o fragmentos relevantes para una consulta dentro de una colección grande de textos.",
+        "Descubrir conocimiento (en base a patrones) a partir de un conjunto masivo de textos.",
+        "Traducir y comprobar la calidad de las traducciones no directas entre diferentes idiomas."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿En cuáles de estas fases de la evolución de Minería de Textos se tiene en cuenta el proceso semántico de cada palabra?",
+      "options": [
+        "Minería clásica.",
+        "Minería semántica.",
+        "Minería generativa.",
+        "Minería agéntica."
+      ],
+      "correct_options": [2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuáles de estas fases de la evolución de Minería de Textos han concluido en 2026?",
+      "options": [
+        "Minería clásica.",
+        "Minería semántica.",
+        "Minería generativa.",
+        "Minería agéntica."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuáles no son formas de categorizar datos textuales?",
+      "options": [
+        "Según su longitud.",
+        "Según su idioma.",
+        "Según su estructura.",
+        "Según su dominio.",
+        "Según si es numérico o textual.",
+        "Según su contenido."
+      ],
+      "correct_options": [4, 5],
+      "questionType": "multipleChoice"
+    },
+    {
       "question": "¿Cuál de los siguientes formatos es un tipo de dato textural no estructurado?",
       "options": ["PDF.", "JSON.", "CSV.", "YAML.", "XML.", "HTML."],
       "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? El lenguaje sigue una distribución de potencia: unas pocas palabras irrelevantes aparecen muchas veces, muchas palabras relevantes aparecen muy pocas veces.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? Un modelo alimentado con datos mal preprocesados produce resultados poco fiables.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? Acumular datos de calidad permite entrenar mejores modelos, consiguiendo más usuarios con sus datos. Esto nos lleva a un ciclo de mejora continua.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? Las palabras/temas adquieren y pierden contexto/popularidad con el tiempo.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 3,
       "questionType": "singleChoice"
     }
   ]
