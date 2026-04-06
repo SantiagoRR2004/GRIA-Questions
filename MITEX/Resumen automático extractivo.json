@@ -1,6 +1,20 @@
 {
   "questions": [
     {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? los LLMs sufren una curva en \"U\" de atención. El modelo recupera bien el principio y el final del prompt, pero es ciego a la información central.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 5,
+      "questionType": "singleChoice"
+    },
+    {
       "question": "¿Cuáles son las fases de un sistema de resumen extractivo?",
       "options": [
         "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección. -> Reordenado cronológico.",
@@ -13,6 +27,20 @@
         "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Clustering. -> Reordenado cronológico."
       ],
       "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué fenómeno es el de la siguiente descripción? Una web es importante si otras webs importantes la enlazan.",
+      "options": [
+        "Ley de Zipf.",
+        "Garbage in, garbage out.",
+        "Data flywheel.",
+        "Deriva temporal",
+        "Hipótesis distribucional de Firth.",
+        "Lost in the Middle.",
+        "Principio de PageRank."
+      ],
+      "correct_option": 6,
       "questionType": "singleChoice"
     }
   ]
