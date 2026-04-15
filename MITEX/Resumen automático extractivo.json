@@ -15,18 +15,43 @@
       "questionType": "singleChoice"
     },
     {
-      "question": "¿Cuáles son las fases de un sistema de resumen extractivo?",
+      "question": "¿Cuál es la diferencia entre un resumen extractivo y uno abstractivo?",
       "options": [
-        "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección. -> Reordenado cronológico.",
-        "Segmentación y vectorización. -> Construcción de la topología. -> Reordenado cronológico. -> Ranking. -> Selección.",
-        "Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección.",
-        "Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Selección. -> Ranking.",
-        "Ranking. -> Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Selección.",
-        "Segmentación y vectorización. -> Reducción de dimensionalidad. -> Reordenado cronológico. -> Ranking. -> Selección.",
-        "Segmentación y vectorización. -> Construcción de la topología. -> Reordenado cronológico. -> Clustering. -> Selección.",
-        "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Clustering. -> Reordenado cronológico."
+        "El extractivo extrae fragmentos del texto mientras que el abstrativo lo genera.",
+        "El extractivo extrae fragmentos del documento local mientras que el abstractivo usa búsquedas por internet.",
+        "El extractivo extrae fragmentos del texto mientras que el abstrativo usa lógica de primer orden para generarlo.",
+        "El extractivo usa búsquedas por internet mientras que el abstrativo usa lógica de primer orden para generarlo."
       ],
       "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cómo suelen ser los Graphs of Words?",
+      "options": [
+        "Ponderados.",
+        "No dirigidos.",
+        "No ponderados.",
+        "Dirigidos."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cómo se normalizaría la siguiente frase para GoW? El nuevo algoritmo generó imágenes realistas instantáneamente",
+      "options": [
+        "[nuevo] [algoritmo] [generar] [imagen] [realista]",
+        "[nuevo] [algoritmo] [generar] [imagen] [realista] [instantáneo]",
+        "[nuevo] [algoritmo] [generó] [imagen] [realista]",
+        "[el] [nuevo] [algoritmo] [generar] [imagen] [realista] [instantáneo]",
+        "[algoritmo] [generar] [imagen]"
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es el tamaño necesario de la ventana deszlizante de GoW para que aparezca un bucle? [modelo] [entrenar] [datos] [modelo] [aprender]",
+      "options": ["1", "2", "3", "4", "5", "6"],
+      "correct_option": 3,
       "questionType": "singleChoice"
     },
     {
@@ -41,6 +66,43 @@
         "Principio de PageRank."
       ],
       "correct_option": 6,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué factor se multiplica la relevancia media en PageRank?",
+      "options": [
+        "1 menos el factor de amortiguación.",
+        "El factor de amortiguación.",
+        "El prestigio del nodo.",
+        "La ponderación de la arista frente a las otras aristas salientes."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué diferencias aparecen cuando se pasa a usar TextRank para oraciones?",
+      "options": [
+        "Los vértices pasan a ser oraciones completas.",
+        "Las aristas son la similitud semántica.",
+        "El grafo pasa a ser completo.",
+        "El grafo pasa a ser dirigido siguiendo el orden de aparición."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "¿Cuáles son las fases de un sistema de resumen extractivo?",
+      "options": [
+        "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección. -> Reordenado cronológico.",
+        "Segmentación y vectorización. -> Construcción de la topología. -> Reordenado cronológico. -> Ranking. -> Selección.",
+        "Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección.",
+        "Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Selección. -> Ranking.",
+        "Ranking. -> Reordenado cronológico. -> Segmentación y vectorización. -> Construcción de la topología. -> Selección.",
+        "Segmentación y vectorización. -> Reducción de dimensionalidad. -> Reordenado cronológico. -> Ranking. -> Selección.",
+        "Segmentación y vectorización. -> Construcción de la topología. -> Reordenado cronológico. -> Clustering. -> Selección.",
+        "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Clustering. -> Reordenado cronológico."
+      ],
+      "correct_option": 0,
       "questionType": "singleChoice"
     }
   ]
