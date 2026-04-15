@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "question": "¿Por qué se usa el inglés para la fase de razonamiento en los LLMs?",
+      "options": [
+        "Hay más textos disponibles en inglés.",
+        "El inglés consume menos tokens.",
+        "El inglés es más lógico.",
+        "El inglés es no tiene casos gramaticales.",
+        "La codificación de los caracteres es más sencilla en inglés."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    }
+  ]
+}
