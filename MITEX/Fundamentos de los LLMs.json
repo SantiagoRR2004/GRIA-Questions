@@ -1,16 +1,38 @@
 {
   "questions": [
     {
+      "question": "En el contexto de aprendizaje en contexto, ¿cuál de las siguientes afirmaciones es estrictamente cierta?",
+      "options": [
+        "El modelo realiza un micro-ajuste de sus matrices de pesos mediante retropropagación temporal durante la inferencia.",
+        "El modelo altera sus logits aplicando la técnica \"instruction tuning\" en tiempo real.",
+        "Se adapta el comportamiento del modelo sin modificar sus pesos, únicamente guiando la generación de la distribución de probabilidades en base al contexto.",
+        "Requiere obligatoriamente un proceso de alineación de preferencias previo por cada ejemplo proporcionado en el prompt."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
       "question": "¿Por qué se usa el inglés para la fase de razonamiento en los LLMs?",
       "options": [
         "Hay más textos disponibles en inglés.",
         "El inglés consume menos tokens.",
         "El inglés es más lógico.",
-        "El inglés es no tiene casos gramaticales.",
+        "El inglés no tiene casos gramaticales.",
         "La codificación de los caracteres es más sencilla en inglés."
       ],
       "correct_options": [0, 1],
       "questionType": "multipleChoice"
+    },
+    {
+      "question": "En la decodificación top-p, el núcleo lógico de tokens seleccionables se comporta de la siguiente manera:",
+      "options": [
+        "Es de tamaño estático y siempre retiene exactamente p tokens (los p más probables).",
+        "Varía dinámicamente su tamaño: puede incluir muy pocos tokens si el modelo está muy seguro, o muchos si la distribución está muy repartida.",
+        "Elimina automáticamente todos los tokens con una probabilidad individual inferior a p.",
+        "Escala los logits utilizando en base al valor p (e^p) regulando el determinismo o creatividad del modelo."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
     }
   ]
 }

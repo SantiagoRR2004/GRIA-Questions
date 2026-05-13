@@ -69,7 +69,7 @@
       "questionType": "multipleChoice"
     },
     {
-      "question": "¿Cuál de los siguientes formatos es un tipo de dato textural no estructurado?",
+      "question": "¿Cuál de los siguientes formatos es un tipo de dato textual no estructurado?",
       "options": ["PDF.", "JSON.", "CSV.", "YAML.", "XML.", "HTML."],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -100,6 +100,17 @@
         "Principio de PageRank."
       ],
       "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "En el diseño de una arquitectura de procesamiento de datos textuales, ¿cuál es el propósito de implementar una estrategia de almacenamiento híbrida (JSONL + Apache Parquet)?",
+      "options": [
+        "JSONL se utiliza para leer selectivamente columnas tras la limpieza, mientras que Parquet garantiza la tolerancia a fallos en la fase de scraping.",
+        "JSONL evita la aparición de mojibakes de forma nativa, mientras que Parquet se reserva exclusivamente para almacenar embeddings vectoriales.",
+        "JSONL se utiliza principalmente para acelerar las búsquedas complejas dentro del dataset, mientras que Apache Parquet facilita la edición manual de los datos una vez procesados.",
+        "Ninguna de las anteriores."
+      ],
+      "correct_option": 3,
       "questionType": "singleChoice"
     },
     {

@@ -49,7 +49,7 @@
       "questionType": "singleChoice"
     },
     {
-      "question": "¿Cuál es el tamaño necesario de la ventana deszlizante de GoW para que aparezca un bucle? [modelo] [entrenar] [datos] [modelo] [aprender]",
+      "question": "¿Cuál es el tamaño necesario de la ventana deslizante de GoW para que aparezca un bucle? [modelo] [entrenar] [datos] [modelo] [aprender]",
       "options": ["1", "2", "3", "4", "5", "6"],
       "correct_option": 3,
       "questionType": "singleChoice"
@@ -66,6 +66,17 @@
         "Principio de PageRank."
       ],
       "correct_option": 6,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cuál es el propósito exacto de introducir la teletransportación (factor de amortiguación d) sobre la matriz dispersa en TextRank para oraciones?",
+      "options": [
+        "Eliminar las aristas espurias generadas por oraciones redundantes.",
+        "Convertir la matriz dispersa (CSR) de vuelta en un array denso.",
+        "Conectar \"islas\" aisladas (componentes conexas) mediante \"aristas virtuales\" de ruido uniforme para garantizar la convergencia global del ranking.",
+        "Resolver las referencias anafóricas inter-documento antes de calcular la similitud."
+      ],
+      "correct_option": 2,
       "questionType": "singleChoice"
     },
     {
@@ -91,6 +102,17 @@
       "questionType": "multipleChoice"
     },
     {
+      "question": "¿Al aplicar dispersión mediante un grafo K-NN no dirigido, ¿qué ocurre estructuralmente con las oraciones más centrales del documento?",
+      "options": [
+        "Pierden relevancia porque solo pueden mantener un máximo de k aristas entrantes.",
+        "Quedan aisladas en componentes conexas independientes.",
+        "Acabarán teniendo más de k aristas, ya que recibirán aristas de otras oraciones que las consideran entre sus k más similares.",
+        "Su vector de similitud coseno se vuelve negativo para equilibrar el grafo."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    },
+    {
       "question": "¿Cuáles son las fases de un sistema de resumen extractivo?",
       "options": [
         "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Selección. -> Reordenado cronológico.",
@@ -103,6 +125,17 @@
         "Segmentación y vectorización. -> Construcción de la topología. -> Ranking. -> Clustering. -> Reordenado cronológico."
       ],
       "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Para resolver la contradicción por obsolescencia en MDS tecnológico (ej. \"La última versión, GPT-4\" vs \"La última versión, GPT-5\"), ¿qué mecanismo de grafos se usa?",
+      "options": [
+        "Se filtran las stopwords de tiempo.",
+        "Se multiplica el peso original de la arista del nodo por una función de decaimiento exponencial temporal.",
+        "Se invierte la matriz de adyacencia usando valores recípricos.",
+        "Se asigna peso negativo a todas las aristas inter-documento."
+      ],
+      "correct_option": 1,
       "questionType": "singleChoice"
     }
   ]

@@ -16,7 +16,40 @@
     },
     {
       "question": "¿Cuál de estos modelos de embeddings se adapta a la polisemia?",
-      "options": ["Word2Vec.", "Skip-gram.", "CBOW", "BERT."],
+      "options": ["Word2Vec.", "Skip-gram.", "CBOW.", "BERT."],
+      "correct_option": 3,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Cómo resuelve BERT el problema de la polisemia en la fase de inferencia al generar embeddings contextuales?",
+      "options": [
+        "Entrenando un modelo CBOW inverso que genera un vector estático diferente por cada aceptación en el diccionario.",
+        "Calculando la relevancia de cada palabra con su contexto mediante matrices de atención y realizando una media ponderada entre el embedding estático inicial y los del contexto, en múltiples etapas.",
+        "Utilizando una arquitectura siamesa que combina dos contextos mediante atención.",
+        "Aplicando pooling sobre todas las dimensiones de la capa oculta para extraer el rasgo semántico más fuerte de la oración."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "En la arquitectura siamesa de SBERT, ¿cuál es el propósito específico de la estrategia de pooling?",
+      "options": [
+        "Intercambiar pesos entre los dos modelos BERT durante el entrenamiento para evitar el sobreajuste.",
+        "Combinar los embeddings contextuales individuales de cada token en un vector único de tamaño fijo que represente el significado global del texto.",
+        "Reducir la dimensionalidad de 768D a un espacio de 2 o 3 dimensiones para su visualización.",
+        "Calcular de manera directa el grado de implicación, contradicción o neutralidad entre dos sentencias dadas."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "En los algoritmos de búsqueda aproximada de vecinos más cercanos (ANN), ¿qué diferencia estructural crítica existe entre HNSW y métodos ANN basados en clustering?",
+      "options": [
+        "HNSW es exacto, calcula la similitud contra el 100% de la base de datos.",
+        "HNSW divide rígidamente por umbrales y requiere evitar documentos fuera del clúster seleccionado, mientras que los métodos basados en clustering no tienen umbrales estrictos y permite alcanzar documentos de nivel inferior a través de múltiples caminos cruzados.",
+        "HNSW se usa exclusivamente en modelos léxicos BM25, no en semánticos.",
+        "Ninguna de las anteriores."
+      ],
       "correct_option": 3,
       "questionType": "singleChoice"
     },

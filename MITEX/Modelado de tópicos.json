@@ -13,6 +13,17 @@
       "questionType": "singleChoice"
     },
     {
+      "question": "Antes de aplicar clustering sobre el espacio multidimensional en los que se encuentran los embeddings de los textos, es necesario realizar una transformación espacial. ¿Por qué?",
+      "options": [
+        "La falta de zonas vacías que aislen los documentos impide trazar fronteras semánticas claras debido a la dispersión en alta dimensionalidad.",
+        "Que SBERT sólo genera vectores basados en ocurrencias exactas (BoW), incompatibles con el cálculo de distancias continuas.",
+        "La complejidad computacional de aplicar la métrica de similitud coseno en espacios multidimensionales (más de 100 dimensiones).",
+        "El agrupamiento excesivo de los documentos en único centroide, eliminando la varianza temática."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
       "question": "¿Cuáles de estos no son hiperparámetros de Uniform Manifold Approximation and Projection?",
       "options": [
         "n_neighbors.",
@@ -57,6 +68,28 @@
         "La media de la diferencia absoluta de las distancias al resto de instancias."
       ],
       "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "En HDBSCAN, al calcular la distancia de accesibilidad mutua, el algoritmo toma el valor máximo entre el límite de vecindad A, el límite de vecindad de B, y la distancia geométrica entre ambos. ¿Qué problema crítico de clustering soluciona matemáticamente esta operación?",
+      "options": [
+        "Garantiza que absolutamente todos los documentos del corpus acaben asignados a un tema, evitando que queden textos sin clasificar.",
+        "El efecto cadena, evitando que nodos ruidosos sirvan de puente para asignar otros nodos aislados a un clúster denso.",
+        "Fuerza  a que todos los clústeres resultantes tengan aproximadamente el mismo tamaño y la misma cantidad de documentos.",
+        "Reduce el tiempo de convergencia del algoritmo al ignorar directamente los documentos que están demasiado lejos."
+      ],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Durante el proceso de condensación del dendograma en HDBSCAN, se evalúa una bifurcación donde el segmento A supera el tamaño min_cluster_size, pero el segmento B no lo supera. ¿Qué acción toma el algoritmo?",
+      "options": [
+        "Etiqueta ambos segmentos como clústeres independientes para no perder información semántica.",
+        "Fusiona ambos segmentos, incrementando el parámetro min_samples.",
+        "Descarta el segmento A por ser estadísticamente inconsistente y clasifica el B como ruido.",
+        "Considera el segmento B como ruido y asume que el segmento A es el mismo clúster original (el padre), pero ahora más limpio tras eliminar el ruido."
+      ],
+      "correct_option": 3,
       "questionType": "singleChoice"
     }
   ]

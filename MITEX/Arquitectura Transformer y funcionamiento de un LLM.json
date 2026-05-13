@@ -1,0 +1,15 @@
+{
+  "questions": [
+    {
+      "question": "¿Cuál es el mecanismo fundamental mediante el cual rotary position embedding (RoPE) inyecta información posicional al mecanismo de atención?",
+      "options": [
+        "Suma un vector continuo generado por funciones seno y coseno directamente el embedding de entrada.",
+        "Modifica los pesos de la red FFN añadiendo un sesgo dependiente de la longitud máxima L_max.",
+        "Rota los vectores de query y key durante el mecanismo de atención, ajustando la afinidad en base a la distancia relativa entre tokens, sin utilizar vectores posicionales aditivos.",
+        "Transforma la matriz de afinidad S multiplicándola por un escalar relativo a la posición absoluta de cada token."
+      ],
+      "correct_option": 2,
+      "questionType": "singleChoice"
+    }
+  ]
+}
