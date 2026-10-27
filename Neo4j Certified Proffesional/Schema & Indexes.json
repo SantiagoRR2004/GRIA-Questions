@@ -1,0 +1,106 @@
+{
+  "questions": [
+    {
+      "question": "A Neo4j database schema can be modified after data has been ingested by refactoring the data.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements is correct?",
+      "options": ["Neo4j allows for an optional schema."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "An index in Neo4j makes data retrieval more efficient and can improve query performance.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following indexes are available in Neo4j?",
+      "options": ["TEXT.", "RANGE.", "VECTOR.", "CURRENCY."],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement below to create an existence constraint on the rated property on the ()-[:RATED]->() relationship.\n\nCREATE CONSTRAINT rated_rating\nFOR ()-[r:RATED]-() REQUIRE r.rating -- select --",
+      "options": ["IS NOT NULL.", "EXISTS.", "IS UNIQUE.", ":: NOT NULL."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following Cypher statements will visualize your database schema?",
+      "options": [
+        "CALL db.schema.visualization().",
+        "MATCH schema = VISUALIZE ()-[]->() RETURN schema.",
+        "CALL schema.visualize().",
+        "SHOW SCHEMA."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What makes fulltext and vector indexes different from other indexes in Neo4j?",
+      "options": [
+        "They are not automatically used by the query planner for ordinary pattern matching.",
+        "They can be specified for properties of relationships.",
+        "They can be used to constrain uniqueness of a relationship property value.",
+        "They must be queried by calling a procedure."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement below to query a fulltext index called movieInfo with the value in the parameter $query.\n\n-- select --(\"movieInfo\", $query)\nYIELD node, score\nRETURN node.title, score",
+      "options": [
+        "CALL db.index.fulltext.queryNodes.",
+        "QUERY FULLTEXT INDEX WITH.",
+        "SELECT INDEX.",
+        "MATCH fulltext.",
+        "CALL fulltext.queryNodes."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement below to create a Vector index on the :Movie.embedding property.\n\n-- select -- moviePlots IF NOT EXISTS\nFOR (m:Movie) ON m.embedding\nOPTIONS {indexConfig: {\n `vector.dimensions`: 1536,\n `vector.similarity_function`: 'cosine'\n}}",
+      "options": [
+        "CREATE VECTOR INDEX.",
+        "CREATE INDEX.",
+        "CREATE CONSTRAINT.",
+        "CALL db.vector.createIndex."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you create a unique constraint on the email property for any node with the label User?",
+      "options": [
+        "CREATE CONSTRAINT FOR (u:User) REQUIRE (u.email) IS UNIQUE.",
+        "CREATE INDEX ON :User(email).",
+        "CREATE CONSTRAINT ON (u:User) ASSERT u.email IS NODE KEY.",
+        "CREATE CONSTRAINT ON (u:User) ASSERT u.email IS UNIQUE."
+      ],
+      "correct_option": 0
+    },
+    {
+      "question": "You can create an index on nodes or relationships.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you create a RANGE index on a relationship property?",
+      "options": [
+        "CREATE RANGE INDEX index_name FOR ()-[relType:RELATIONSHIP_TYPE]-() ON (relType.property_key).",
+        "CREATE FULLTEXT INDEX index_name FOR (n:NODE_LABEL) ON (n.property_key).",
+        "CREATE TEXT INDEX index_name FOR ()-[relType:RELATIONSHIP_TYPE]-() ON (relType.property_key).",
+        "CREATE BTREE INDEX index_name FOR (n:NODE_LABEL) ON (n.property_key)."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

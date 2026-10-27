@@ -1,0 +1,66 @@
+{
+  "questions": [
+    {
+      "question": "Which Cypher command would you use to load data from a CSV file?",
+      "options": ["LOAD CSV.", "IMPORT CSV.", "GET CSV.", "READ CSV."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In a complex data import scenario involving both nodes and relationships, which of the following sequence of steps is recommended?",
+      "options": ["Import nodes first, then relationships."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements applies when using the LOAD CSV statement?",
+      "options": [
+        "All values are cast as a string.",
+        "You must cast any values other than a string using the appropriate Cypher function.",
+        "You must define the data types for each file in import.conf.",
+        "The database will automatically determine the data type when reading the CSV file."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "If you omit WITH HEADERS from a LOAD CSV statement, which of the following will happen?",
+      "options": ["Each row will be treated as a list."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement below to execute the LOAD CSV command in batches of 1000 rows.\n\nLOAD CSV WITH HEADERS FROM 'file:///people.csv' AS row\nCALL (row) {\n\tMERGE (p:Person {id: row.id})\n\tSET p += row\n} -- select --",
+      "options": [
+        "IN TRANSACTIONS OF 1000 ROWS.",
+        "OPTIONS { batchSize: 1000 }.",
+        "COMMIT ON 1000.",
+        "ROWS=1000."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the best method for importing data to Neo4j?",
+      "options": [
+        "Depends on the data source and system requirements (online, offline, etc.).",
+        "LOAD CSV.",
+        "neo4j-admin import.",
+        "Data importer tool."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the following Cypher statement to instruct Neo4j that the first row in the CSV file contains headers.\n\nLOAD CSV -- select -- FROM 'file:///people.csv' AS row\nCREATE (p:Person)\nSET p += row",
+      "options": [
+        "WITH HEADERS.",
+        "HAS HEADERS.",
+        "HEADERROW=1.",
+        "USE FIRST AS HEADERS."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

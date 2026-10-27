@@ -1,0 +1,87 @@
+{
+  "questions": [
+    {
+      "question": "Given the following domain question.\nWhich customers have purchased Product X?\nWhich of the following could you represent as relationships in your data model?",
+      "options": ["Purchased.", "Customer.", "X.", "Product."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Given the following domain question.\nWhat parts of type X are required to make product Y?\nWhich of the following elements could you represent as nodes in your data model?",
+      "options": ["Part.", "Type.", "Product.", "X.", "Y."],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "When is it a good idea to refactor a data model?",
+      "options": [
+        "When the data model is not performant or does not fill requirements of the business problem.",
+        "When the data model has more than 4 relationships.",
+        "Never. Data models should be designed to last.",
+        "When the application is deployed."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "You have a graph consisting of (:Customer) nodes with :ORDERED relationships to (:Products).\nInstead of using a direct relationship between Customer and Product to represent an order, what is the benefit of extracting this relationship into an intermediate node Order? Which of the following optimizations involves enhancing the data model by extracting the 'ordered' relationship into a separate node?",
+      "options": [
+        "It enables linking the order to multiple entities, such as products and shipping companies.",
+        "It prevents the need for any relationships between Customer and Product.",
+        "It allows us to only link products to customers.",
+        "It simplifies the graph by reducing the number of nodes."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In modeling, the use of bi-directional relationships is a good practice when:",
+      "options": [
+        "The semantics of the relationship in one direction is different from the other direction.",
+        "You want to show the same relationship between two nodes in each direction.",
+        "This is never a good idea.",
+        "A relationship between two nodes could be represented in either direction."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the recommended limit for the number of labels for a node in a data model?",
+      "options": ["4 labels.", "6 labels."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Before you start a query tuning exercise, you must make sure that the set of queries you will be measuring represents the correct syntax. You can use EXPLAIN to ensure that unnecessary NodeByLabelScan steps occur.\nFor each query, you should confirm that:",
+      "options": [
+        "An index will be used as expected.",
+        "Use correct names for labels, property keys, and property values.",
+        "Use correct relationship types.",
+        "Use literal strings to test values."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Given the Cypher statement below, what are the labels in the data model?\n\nMATCH (p:Person:Customer)-[:PURCHASED]->(order:Order)\nWHERE p.name = 'Priya'\nRETURN p, order",
+      "options": [
+        "Person, Customer, Order.",
+        "Person and Purchase.",
+        "Person, Purchase, Order.",
+        "Customer and Order."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "You are building a recommendation engine for an online store.\nSome of their products are perishable and need to be sold within a certain timeframe. Managers would like to find a list of perishable products for stock control purposes.\nWhich of the following actions should you take when modeling the data?",
+      "options": [
+        "Add a :Perishable label to perishable products.",
+        "Create a boolean property named perishable.",
+        "Create a :Status node with the name Perishable and create relationships from each product node."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
