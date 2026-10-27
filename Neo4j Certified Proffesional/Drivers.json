@@ -2,7 +2,7 @@
   "questions": [
     {
       "question": "Which of the following protocols are valid to create a secure connection to Neo4j using the Driver?",
-      "options": ["bolt+s.", "neo4j+s.", "neo4j+ssc.", "graphdb+s", "https"],
+      "options": ["bolt+s.", "neo4j+s.", "neo4j+ssc.", "graphdb+s.", "https."],
       "correct_options": [0, 1, 2],
       "questionType": "multipleChoice"
     },
@@ -38,7 +38,9 @@
     {
       "question": "When establishing a driver connection using the neo4j+ssc, which of the following will occur?",
       "options": [
-        "The driver will establish an encrypted connection but it will not verify the SSL certificate."
+        "The driver will establish an encrypted connection but it will not verify the SSL certificate.",
+        "The driver will establish an encrypted connection and it will verify the SSL certificate.",
+        "The driver will establish an unencrypted connection."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -62,10 +64,10 @@
     {
       "question": "Which of the following represents the correct order of steps in the Neo4j Driver lifecycle?",
       "options": [
-        "Connect to server → Verify connection → Execute Cypher statement → Parse results → Close connection",
-        "Connect to server → Execute Cypher statement → Verify connection → Parse results → Close connection",
-        "Verify connection → Connect to server → Execute Cypher statement → Parse results → Close connection",
-        "Execute Cypher statement → Connect to server → Verify connection → Parse results → Close connection"
+        "Connect to server → Verify connection → Execute Cypher statement → Parse results → Close connection.",
+        "Connect to server → Execute Cypher statement → Verify connection → Parse results → Close connection.",
+        "Verify connection → Connect to server → Execute Cypher statement → Parse results → Close connection.",
+        "Execute Cypher statement → Connect to server → Verify connection → Parse results → Close connection."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -73,28 +75,34 @@
     {
       "question": "Complete the following Python code to verify the database credentials passed to the GraphDatabase.driver() method are correct.\n\ndriver = GraphDatabase.driver(\n\t\"neo4j://localhost:7687\",\n\tauth=(\"neo4j\", \"1$ecurepassword\")\n)\n\ndriver.-- select --",
       "options": [
-        "verify_authentication()",
-        "assert_auth()",
-        "check_authentication()",
-        "verify()"
+        "verify_authentication().",
+        "assert_auth().",
+        "check_authentication().",
+        "verify()."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
     {
       "question": "Neo4j natively supports which of the following spatial data types?",
-      "options": ["WGS-84", "Cartesian", "H3"],
+      "options": ["WGS-84.", "Cartesian.", "H3."],
       "correct_options": [0, 1],
       "questionType": "multipleChoice"
     },
     {
       "question": "What is the purpose of the result_transformer parameter?\n\nwith GraphDatabase.driver(\n\t\"neo4j://localhost:7687\" auth=(\"neo4j\", \"letmein\")\n) as driver:\n\tresult = driver.execute_query(\n\t\tcypher,\n\t\tname=name,\n\t\tresult_transformer_= lambda result: [\n\t\t\tf\"Tom Hanks played {record['role']} in {record['title']}\"\n\t\t\tfor record in result\n\t\t]\n\t)",
       "options": [
-        "To transform the results into another format",
-        "To decode Python objects",
-        "To encrypt queries for secure transport over the wire"
+        "To transform the results into another format.",
+        "To decode Python objects.",
+        "To encrypt queries for secure transport over the wire."
       ],
       "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When using the driver within a Context Manager in Python, is calling driver.close() required?\n\nwith GraphDatabase.driver(\n\t\"neo4j://localhost:7687\" auth=(\"neo4j\", \"letmein\")\n) as driver:\n\t# driver.close() here required?",
+      "options": ["True.", "False."],
+      "correct_option": 1,
       "questionType": "singleChoice"
     }
   ]

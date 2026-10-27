@@ -101,6 +101,28 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What type of constraint can you use to ensure that two or more properties are unique and exist for any given label?",
+      "options": [
+        "Node Key Constraint.",
+        "Unique Constraint.",
+        "NodePropertyConst.",
+        "Combination Constraint."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the purpose of a unique constraint in Neo4j?",
+      "options": [
+        "To ensure that a property value is unique for all nodes with a specific label.",
+        "To enforce referential integrity between nodes.",
+        "To prevent relationships from being created.",
+        "To ensure that all nodes have a label."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

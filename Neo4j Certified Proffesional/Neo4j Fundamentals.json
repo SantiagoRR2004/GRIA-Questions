@@ -43,7 +43,12 @@
     },
     {
       "question": "Which of the following best describes a graph database?",
-      "options": ["A database that stores data as nodes and relationships."],
+      "options": [
+        "A database that stores data as nodes and relationships.",
+        "A database that stores data as key-value pairs.",
+        "A database that stores data as JSON documents.",
+        "A database that stores data in tables with rows and columns."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -137,6 +142,18 @@
     {
       "question": "What protocol do the official Neo4j drivers use to access the Neo4j database?",
       "options": ["Bolt.", "TLS.", "NFJ.", "RMI."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What type of database is Neo4j",
+      "options": [
+        "Graph database.",
+        "Semantic database.",
+        "Document database.",
+        "Key-value store.",
+        "Relational database."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     }
