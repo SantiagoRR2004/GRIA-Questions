@@ -1,0 +1,384 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is the correct way to represent a relationship from a Person to a Movie in Cypher?",
+      "options": [
+        "(p:Person)-[:ACTED_IN]->(m:Movie).",
+        "(Person)-[Movie]->.",
+        "[Person]->(Movie).",
+        "(Person)<-[:ACTED_IN]-(Movie)."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the following MATCH clause, which of the elements represents the relationship between two nodes?\n\nMATCH (a)-[b]->(c)",
+      "options": ["[b]."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Update the following Cypher statement to find or create a node in the database.\n\n-- select -- (m:Movie {title: 'Toy Story'})\nRETURN m",
+      "options": ["MERGE.", "MATCH OR CREATE.", "INSERT.", "UPSERT."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How can you delete a specific node in Neo4j using Cypher?",
+      "options": [
+        "Use the MATCH clause to find the node and then DELETE it.",
+        "Use the DELETE clause with the pattern you want to delete.",
+        "Use the MERGE clause to delete the node."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the following Cypher statement to return the entire Person node.\n\nMATCH (p:Person)-[:ACTED_IN]->(:Movie{title: 'Youve Got Mail'})\nRETURN -- select -- AS person",
+      "options": ["p."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the RETURN clause do in a Cypher query?",
+      "options": ["It specifies what data to output from the query."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How can you eliminate duplicate rows in the results of a Cypher query?",
+      "options": [
+        "Using the DISTINCT keyword.",
+        "Using the REMOVE DUPLICATES function.",
+        "Using the UNIQUE keyword.",
+        "Using the DELETE clause."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements about case sensitivity in Cypher are true?",
+      "options": [
+        "Labels and property keys are case-sensitive.",
+        "Variables are case-sensitive.",
+        "Labels, property keys, and variables are case-sensitive, but Cypher keywords are not."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How can you ensure that a property exists in a Cypher query?",
+      "options": [
+        "Use the 'IS NOT NULL' operator.",
+        "Use the 'EXISTS' function.",
+        "Use the 'IS NULL' operator.",
+        "Use the 'NOT EXISTS' function."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How would you write a Cypher WHERE clause to find people born in 1970, 1980, or 1990?",
+      "options": [
+        "WHERE p.born IN [1970, 1980, 1990].",
+        "WHERE p.born == 1970 OR 1980 OR 1990.",
+        "WHERE p.born IS 1970, 1980, 1990.",
+        "WHERE p.born = [1970, 1980, 1990]."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which Cypher WHERE clause would return only movies that have a tagline property?",
+      "options": [
+        "WHERE m.tagline IS NOT NULL.",
+        "WHERE m.tagline IS NOT NULL OR EXISTS.",
+        "WHERE HAS(m.tagline).",
+        "WHERE m.tagline IS DEFINED."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Consider these two similar-looking queries:\n\n// Query 1: Single MATCH\nMATCH (p:Person {name: \"Al Pacino\"})-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(costar)\nRETURN costar.name\nORDER BY count(m) DESC, costar.name\nLIMIT 1;\n\n// Query 2: Separate MATCH clauses\nMATCH (p:Person {name: \"Al Pacino\"})-[:ACTED_IN]->(m:Movie)\nMATCH (m)<-[:ACTED_IN]-(costar)\nRETURN costar.name\nORDER BY count(m) DESC, costar.name\nLIMIT 1;\n\nQuery 1 never returns Al Pacino as a costar, but Query 2 can. Why?",
+      "options": [
+        "Each MATCH clause has its own relationship uniqueness scope, so the same ACTED_IN relationship can be reused and Al Pacino can be matched as a costar."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the difference between UNION and UNION ALL in Neo4j?",
+      "options": [
+        "UNION returns distinct results, while UNION ALL returns all results including duplicates."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How can you escape special characters such as spaces in database, user and role names?",
+      "options": ["With backticks (`).", "With backslashes (\\)."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the following Cypher statement to return the name property of the Person node.\n\nMATCH (:Movie{title: 'The Matrix'})<-[:ACTED_IN]-(p:Person)\nRETURN -- select -- AS name",
+      "options": ["p.name."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which Cypher statement would you use to find all movies released after 2010?",
+      "options": ["MATCH (m:Movie) WHERE m.released > 2010 RETURN m."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following Cypher statements would you use to count the number of nodes with the label Person?",
+      "options": [
+        "MATCH (n:Person) RETURN count(n).",
+        "RETURN COUNT { (:Person) }.",
+        "MATCH (n:Person) RETURN avg(n).",
+        "MATCH (n:Person) RETURN sum(n)."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How do you ensure that the same relationship is not created twice between two nodes?",
+      "options": [
+        "Use the MERGE keyword when creating the relationship.",
+        "Use the UNIQUE keyword when creating the relationship.",
+        "Use the DISTINCT keyword when creating the relationship.",
+        "Use the ONLY keyword when creating the relationship."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following Cypher WHERE clauses would find movies released between 2000 and 2005 (inclusive)?",
+      "options": ["WHERE m.released >= 2000 AND m.released <= 2005."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the query to return the current time as a string in HH:mm:ss format.\n\nWITH datetime() AS datetime\nRETURN -- select --( datetime, 'HH:mm:ss')\nAS formattedDateTime",
+      "options": ["format.", "toString.", "apoc.temporal.format.", "strftime."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following commands would you use to drop a constraint?",
+      "options": [
+        "DROP CONSTRAINT [constraint_name].",
+        "DELETE CONSTRAINT [constraint_name]."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which Cypher clause would you use to create a subquery?",
+      "options": ["CALL { /.../ }.", "IN SUBQUERY { /.../ }."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement below to pass the p identifier to the subquery.\n\nMATCH (p:Person)-[:ACTED_IN]->()-[:IN_GENRE]->(:Genre {name: 'Comedy'})\nCALL -- select -- {\n\tSET p:FunnyActor\n} IN TRANSACTIONS OF 1000 ROWS",
+      "options": ["(p).", "HAVING p.", "USING p.", "SELECT p FROM $mainQuery."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which method of traversal behavior does Neo4j use during a Cypher query?",
+      "options": [
+        "depth-first.",
+        "breadth-first.",
+        "topological.",
+        "sequential."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the difference between the MERGE and CREATE clauses in Cypher?",
+      "options": [
+        "MERGE creates the pattern only if it does not already exist, while CREATE always creates new nodes and relationships.",
+        "CREATE and MERGE are interchangeable."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why is it recommended to avoid unnecessary labels in query patterns for better performance?",
+      "options": [
+        "Labels on non-anchor nodes force a label check, which may not be necessary.",
+        "Labels on non-anchor nodes are not allowed.",
+        "Labels on non-anchor nodes are forbidden as part of the software licensing agreement.",
+        "Labels on non-anchor nodes reduce the need for WHERE clauses."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following Cypher statements will find people who acted in the movie Toy Story?",
+      "options": [
+        "MATCH (p:Person)-[:ACTED_IN]->(m:Movie) WHERE m.title = 'Toy Story' RETURN p.",
+        "MATCH (p:Person)-[:ACTED_IN]->(m:Movie {title: 'Toy Story'}) RETURN p.",
+        "SELECT path= (p:Person)-[:ACTED_IN]->(m:Movie {title: 'Toy Story'}) RETURN path.",
+        "MATCH people -> acted in -> movie(toy story)."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which of the following best describes the behavior of MERGE in Neo4j?",
+      "options": [
+        "It matches existing patterns or creates new ones if they do not exist.",
+        "It always creates new nodes and relationships.",
+        "It deletes existing nodes and relationships before creating new ones.",
+        "It only updates existing nodes and relationships."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Update the following Cypher statement to delete a node and all its relationships.\n\nMATCH (m:Movie {title: 'Toy Story'})\n-- select --",
+      "options": [
+        "DETACH DELETE m.",
+        "DELETE m.",
+        "DELETE m WITH RELATIONSHIPS.",
+        "REMOVE m."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the following Cypher statement, what do the parentheses represent?\n\nMATCH p = ()-->() RETURN p",
+      "options": ["Nodes.", "Tables.", "Label.", "Relationships."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "If you run the following Cypher statement on an empty database, which properties will exist on the node?\n\nMERGE (m:Movie {title: \"Toy Story\"})\nON CREATE SET m.released = 1995\nON MATCH SET m.tagline = \"The adventure takes off! Hang on for the comedy that goes to infinity and beyond!\"\nSET m.imdbRating = 8.3",
+      "options": ["title.", "released.", "imdbRating.", "tagline."],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What does the IN operator do in Cypher in the following statement?\n\nMATCH (p:Person)\nWHERE p.born IN [1970, 1980, 1990]\nRETURN p.name, p.born",
+      "options": [
+        "Finds Person nodes born in 1970, 1980, or 1990.",
+        "Finds movies released in 1970, 1980, or 1990.",
+        "Finds any node created between 1970 and 1990.",
+        "It is an invalid Cypher syntax."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the query to return the unique element ID of each Person node.\n\nMATCH (p:Person)\nRETURN -- select -- (p) AS personId",
+      "options": ["elementId.", "id.", "uuid.", "identify."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which Cypher command can be used to list the indexes in a Neo4j database?",
+      "options": [
+        "CALL db.indexes().",
+        "CREATE INDEX.",
+        "MATCH (n) RETURN n.",
+        "SHOW INDEXES."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which Cypher clause would you use to find all Person nodes whose name starts with 'Ann'?",
+      "options": [
+        "WHERE p.name STARTS WITH 'Ann'.",
+        "WHERE p.name ENDS WITH 'Ann'.",
+        "WHERE p.name = 'Ann*'.",
+        "WHERE p.name CONTAINS 'Ann'."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why would Tom Hanks appear in this Cypher statement?\n\nMATCH (p:Person)-[:ACTED_IN]->(m)\nMATCH (m)<-[:ACTED_IN]-(p2)\nRETURN p2.name AS coactor\n\nBut not in this one?\n\nMATCH (p:Person)-[:ACTED_IN]->(m),\n\t(m)<-[:ACTED_IN]-(p2)\nRETURN p2.name AS coactor",
+      "options": [
+        "Relationships are unique within the scope of a single MATCH clause only.",
+        "The import process probably created two Tom Hanks nodes in the database.",
+        "It would never happen.",
+        "It's a bug in Neo4j. You should report it to Neo4j Customer Support."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the query to return only people who directed at least one movie.\n\nMATCH (p:Person)\nWHERE -- select -- { (p)-[:DIRECTED]->(:Movie) }\nRETURN p.name",
+      "options": ["EXISTS.", "CONTAINS.", "HAS.", "MATCH."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Your principal developer identifies the following query in a code review and recommends replacing it with a subquery COUNT:\n\n// Original query:\nMATCH (u:User)-[r:RATED]->(m:Movie {title: 'Frozen'})\nRETURN COUNT(r) as ratingCount\n\n// Recommended query:\nMATCH (u:User)-[:RATED]->(m:Movie {title: 'Frozen'})\nRETURN COUNT { (u)-[:RATED]->(m) } as ratingCount\nWhat is the main benefit of the recommended query?",
+      "options": [
+        "Relationships aren't expanded in memory since the query uses a static count.",
+        "The results will be more accurate as it handles null values better.",
+        "The query is easier to read and understand for new developers.",
+        "The updated query is shorter and more concise."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the difference between using EXPLAIN and PROFILE?",
+      "options": [
+        "EXPLAIN provides estimates, while PROFILE provides exact steps and number of rows retrieved.",
+        "EXPLAIN provides exact steps and number of rows retrieved, while PROFILE provides estimates.",
+        "EXPLAIN is used for updating data, while PROFILE is used for querying.",
+        "EXPLAIN is used for querying, while PROFILE is used for updating data."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In a query requiring pagination, why is it essential to use an ORDER BY clause before SKIP and LIMIT?",
+      "options": [
+        "It ensures consistent and predictable results across different pages.",
+        "It improves the query execution time.",
+        "It avoids duplicate results.",
+        "It groups the results by a specified property."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The following Cypher statement will match all nodes in the database and return their relationships regardless, resulting in a cartesian product.\nEach node will be returned as both n and m and each relationship will be returned twice.\n\nMATCH (n)--(m)\nRETURN *\n\nWhich of the following changes would make this statement more efficient?",
+      "options": [
+        "Define a relationship type.",
+        "Define a label for one of the nodes to narrow down the initial search area.",
+        "Define a direction for the relationship."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Suppose we want to return a list of all movies for each actor whose name contains \"Tom\". What is wrong with this code?\n\nMATCH (a:Person)\nWHERE a.name  CONTAINS \"Tom\"\nWITH a, a.name AS actorName\nCALL\n{\n\tMATCH (a)-[:ACTED_IN]->(m:Movie)\n\tRETURN collect(m.title) as movies\n}\nRETURN actorName, movies",
+      "options": [
+        "You must pass a as a variable to the subquery.",
+        "You can only pass property values to a subquery, not nodes.",
+        "You must add WITH movies, actorName after the CALL {} block.",
+        "The syntax is invalid. You must use GraphQL."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How many records will the following Cypher statement return?\n\nUNWIND range(1, 3) AS outer\nCALL {\n\tWITH outer\n\tUNWIND range(1, 3) AS inner\n  RETURN inner\n}\nRETURN outer, inner",
+      "options": ["9.", "1.", "3.", "6.", "12."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

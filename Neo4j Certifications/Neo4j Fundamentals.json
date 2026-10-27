@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following elements make up a property graph?",
+      "options": [
+        "Nodes.",
+        "Labels.",
+        "Relationships.",
+        "Properties.",
+        "Collections.",
+        "Foreign keys.",
+        "Rows."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Relationships in a graph are treated with the same importance as the nodes that they connect.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Related to relational databases - what is the O(n) problem?",
+      "options": [
+        "Increasing response times as database indexes grow larger due to more data."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements are true?",
+      "options": [
+        "Neo4j stores data as nodes and relationships.",
+        "Relationships in Neo4j always have a direction.",
+        "A node can have multiple labels.",
+        "Graph databases are particularly useful when connections between data are as important as the data itself.",
+        "All nodes in Neo4j must have the same properties.",
+        "Properties can only be stored on nodes, not on relationships."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which of the following best describes a graph database?",
+      "options": ["A database that stores data as nodes and relationships."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What type of a database is Neo4j?",
+      "options": ["Graph database."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following is a benefit of using a graph database over a relational database?",
+      "options": [
+        "To perform fast and complex traversals of highly interconnected data.",
+        "Enhanced storage capacity for large binary files",
+        "Simplified handling of unstructured text data",
+        "Better compatibility with legacy SQL applications"
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A graph is a chart, depicting data used for reporting.",
+      "options": ["True.", "False."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What statement best describes index-free adjacency for a Neo4j database?",
+      "options": [
+        "Nodes and their relationships are stored as pointers so that access is very fast without the need for an index to traverse nodes.",
+        "Each relationship is stored as a table where nodes related to each are stored in the same table.",
+        "Each group of nodes is stored as a table where the relationships are mapped to nodes in the same group.",
+        "You never have to add indexes to a Neo4j database to perform faster queries."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following features are available ONLY in Neo4j Enterprise Edition?",
+      "options": [
+        "Clustering architecture.",
+        "Online backup functionality.",
+        "Role-based access control.",
+        "Cypher query language.",
+        "ACID-compliant transactions.",
+        "Programming APIs."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "To take advantage of the Query cache, what should you do?",
+      "options": [
+        "Use parameters in your queries.",
+        "Ensure the casting of keywords and parameters is followed identically in queries.",
+        "Use literals in your queries.",
+        "Define an ID for query reuse."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What statement best describes Cypher, Neo4j's graph query language?",
+      "options": [
+        "It is a declarative query language designed for graph pattern matching and traversals.",
+        "It's an SQL plugin for Neo4j.",
+        "It is a regular expression-like programming language for interfacing with Neo4j.",
+        "It is a procedural programming language for interfacing with Neo4j."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Neo4j supports ACID transactions.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Neo4j uses indexes to store relationships between nodes.",
+      "options": ["True.", "False."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "A relationship can start and end at the same node.\n\nCREATE (t:Test)\nCREATE (t)-[:TEST]->(t)",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What protocol do the official Neo4j drivers use to access the Neo4j database?",
+      "options": ["Bolt.", "TLS.", "NFJ.", "RMI."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

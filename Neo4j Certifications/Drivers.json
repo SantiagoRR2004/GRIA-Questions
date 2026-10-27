@@ -1,0 +1,101 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following protocols are valid to create a secure connection to Neo4j using the Driver?",
+      "options": ["bolt+s.", "neo4j+s.", "neo4j+ssc.", "graphdb+s", "https"],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What is the role of a driver in Neo4j?",
+      "options": [
+        "To establish a connection with the Neo4j database.",
+        "To define the data model in Neo4j.",
+        "To store data in the graph database.",
+        "To visualize nodes and relationships in a forced graph layout."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the default port for connecting to a Neo4j database using the driver?",
+      "options": ["7687.", "8501."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When using a language driver, a statement of results comprises a stream of...",
+      "options": ["records.", "entries."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When working with DateTime values in the driver, which of the following is the correct import statement?",
+      "options": ["from neo4j.time import DateTime."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When establishing a driver connection using the neo4j+ssc, which of the following will occur?",
+      "options": [
+        "The driver will establish an encrypted connection but it will not verify the SSL certificate."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When using a language driver, which forms of transaction functions will be automatically retried on failure?",
+      "options": [
+        "Transaction functions.",
+        "Explicit transactions.",
+        "Auto-commit transactions."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the following Python code to execute a one-off Cypher statement and consume the results as a Pandas DataFrame.\n\ndriver = GraphDatabase.driver(\n\t\"neo4j://localhost:7687\" auth=(\"neo4j\", \"letmein\")\n)\ndf = driver.-- select --\n(\n\t\"MATCH (n) RETURN count(n) AS count\",\n\tresult_transformer_=Result.to_df\n)",
+      "options": ["execute_query.", "cypher.", "to_df.", "run.", "query."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following represents the correct order of steps in the Neo4j Driver lifecycle?",
+      "options": [
+        "Connect to server → Verify connection → Execute Cypher statement → Parse results → Close connection",
+        "Connect to server → Execute Cypher statement → Verify connection → Parse results → Close connection",
+        "Verify connection → Connect to server → Execute Cypher statement → Parse results → Close connection",
+        "Execute Cypher statement → Connect to server → Verify connection → Parse results → Close connection"
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the following Python code to verify the database credentials passed to the GraphDatabase.driver() method are correct.\n\ndriver = GraphDatabase.driver(\n\t\"neo4j://localhost:7687\",\n\tauth=(\"neo4j\", \"1$ecurepassword\")\n)\n\ndriver.-- select --",
+      "options": [
+        "verify_authentication()",
+        "assert_auth()",
+        "check_authentication()",
+        "verify()"
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Neo4j natively supports which of the following spatial data types?",
+      "options": ["WGS-84", "Cartesian", "H3"],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What is the purpose of the result_transformer parameter?\n\nwith GraphDatabase.driver(\n\t\"neo4j://localhost:7687\" auth=(\"neo4j\", \"letmein\")\n) as driver:\n\tresult = driver.execute_query(\n\t\tcypher,\n\t\tname=name,\n\t\tresult_transformer_= lambda result: [\n\t\t\tf\"Tom Hanks played {record['role']} in {record['title']}\"\n\t\t\tfor record in result\n\t\t]\n\t)",
+      "options": [
+        "To transform the results into another format",
+        "To decode Python objects",
+        "To encrypt queries for secure transport over the wire"
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
