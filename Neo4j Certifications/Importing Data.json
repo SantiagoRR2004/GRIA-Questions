@@ -8,7 +8,12 @@
     },
     {
       "question": "In a complex data import scenario involving both nodes and relationships, which of the following sequence of steps is recommended?",
-      "options": ["Import nodes first, then relationships."],
+      "options": [
+        "Import nodes first, then relationships.",
+        "Import relationships first, then nodes.",
+        "Import nodes and relationships simultaneously.",
+        "Import nodes and relationships in separate transactions."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -25,7 +30,12 @@
     },
     {
       "question": "If you omit WITH HEADERS from a LOAD CSV statement, which of the following will happen?",
-      "options": ["Each row will be treated as a list."],
+      "options": [
+        "Each row will be treated as a list.",
+        "The database will crash.",
+        "An LLM will generate headers for you.",
+        "The statement will lead to a Syntax Error."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },

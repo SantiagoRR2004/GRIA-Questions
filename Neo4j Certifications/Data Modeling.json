@@ -82,6 +82,29 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What are some things to look for as red flags to investigate in a Cypher query plan?",
+      "options": [
+        "AllNodesScan.",
+        "NodeByLabelScan with a lot of DB hits.",
+        "Placement of eager operators.",
+        "Reading property values early in the query plan.",
+        "NodeByLabelScan with a few DB hits."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "You have a database consisting of (:Person) nodes connected to (:Movie) nodes through :ACTED_IN and :DIRECTED relationships.\nWhat is the benefit of adding additional (:Actor) labels for any (:Person) node with an :ACTED_IN relationship?",
+      "options": [
+        "It provides a faster way to find a subset of (:Person) nodes.",
+        "There are no benefits.",
+        "It reduces the number of nodes in the graph.",
+        "You can remove the :ACTED_IN relationships altogether."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

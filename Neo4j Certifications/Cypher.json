@@ -13,9 +13,9 @@
     },
     {
       "question": "In the following MATCH clause, which of the elements represents the relationship between two nodes?\n\nMATCH (a)-[b]->(c)",
-      "options": ["[b]."],
-      "correct_option": 0,
-      "questionType": "singleChoice"
+      "options": ["[b].", "-[b]->.", "->(c).", "(a)-.", "(a).", "(c)."],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
     },
     {
       "question": "Update the following Cypher statement to find or create a node in the database.\n\n-- select -- (m:Movie {title: 'Toy Story'})\nRETURN m",
@@ -28,7 +28,8 @@
       "options": [
         "Use the MATCH clause to find the node and then DELETE it.",
         "Use the DELETE clause with the pattern you want to delete.",
-        "Use the MERGE clause to delete the node."
+        "Use the MERGE clause to delete the node.",
+        "There is no way to delete a specific node in Neo4j."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -41,7 +42,12 @@
     },
     {
       "question": "What does the RETURN clause do in a Cypher query?",
-      "options": ["It specifies what data to output from the query."],
+      "options": [
+        "It specifies what data to output from the query.",
+        "It matches nodes in the graph.",
+        "It deletes relationships.",
+        "It creates new nodes."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -117,7 +123,12 @@
     },
     {
       "question": "How can you escape special characters such as spaces in database, user and role names?",
-      "options": ["With backticks (`).", "With backslashes (\\)."],
+      "options": [
+        "With backticks (`).",
+        "With backslashes (\\).",
+        "With single quotes (').",
+        "With double quotes (\")."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -129,7 +140,12 @@
     },
     {
       "question": "Which Cypher statement would you use to find all movies released after 2010?",
-      "options": ["MATCH (m:Movie) WHERE m.released > 2010 RETURN m."],
+      "options": [
+        "MATCH (m:Movie) WHERE m.released > 2010 RETURN m.",
+        "WHERE m.released > 2010 WITH (m:Movie) RETURN m.",
+        "RETURN (m:Movie) WITH m.title WHERE m.released > 2010.",
+        "MATCH (m:Movie) WHERE released > 2010 RETURN m."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -157,7 +173,12 @@
     },
     {
       "question": "Which of the following Cypher WHERE clauses would find movies released between 2000 and 2005 (inclusive)?",
-      "options": ["WHERE m.released >= 2000 AND m.released <= 2005."],
+      "options": [
+        "WHERE m.released >= 2000 AND m.released <= 2005.",
+        "WHERE m.released > 2000 AND m.released < 2005.",
+        "WHERE m.released BETWEEN 2000 AND 2005.",
+        "WHERE m.released = [2000, 2001, 2002, 2003, 2004, 2005]."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -171,14 +192,21 @@
       "question": "Which of the following commands would you use to drop a constraint?",
       "options": [
         "DROP CONSTRAINT [constraint_name].",
-        "DELETE CONSTRAINT [constraint_name]."
+        "DELETE CONSTRAINT [constraint_name].",
+        "REMOVE CONSTRAINT [constraint_name].",
+        "DROP INDEX [constraint_name]."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
     {
       "question": "Which Cypher clause would you use to create a subquery?",
-      "options": ["CALL { /.../ }.", "IN SUBQUERY { /.../ }."],
+      "options": [
+        "CALL { /.../ }.",
+        "IN SUBQUERY { /.../ }.",
+        "CREATE { /.../ }.",
+        "SUBSEQUENTLY { /.../ }."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -203,7 +231,9 @@
       "question": "What is the difference between the MERGE and CREATE clauses in Cypher?",
       "options": [
         "MERGE creates the pattern only if it does not already exist, while CREATE always creates new nodes and relationships.",
-        "CREATE and MERGE are interchangeable."
+        "CREATE and MERGE are interchangeable.",
+        "MERGE is used only for relationships, CREATE only for nodes.",
+        "MERGE always creates new nodes and relationships, while CREATE only creates them if they do not exist."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -284,10 +314,10 @@
     {
       "question": "Which Cypher command can be used to list the indexes in a Neo4j database?",
       "options": [
+        "SHOW INDEXES.",
         "CALL db.indexes().",
         "CREATE INDEX.",
-        "MATCH (n) RETURN n.",
-        "SHOW INDEXES."
+        "MATCH (n) RETURN n."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -377,6 +407,45 @@
     {
       "question": "How many records will the following Cypher statement return?\n\nUNWIND range(1, 3) AS outer\nCALL {\n\tWITH outer\n\tUNWIND range(1, 3) AS inner\n  RETURN inner\n}\nRETURN outer, inner",
       "options": ["9.", "1.", "3.", "6.", "12."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements about case sensitivity in Cypher are true?",
+      "options": [
+        "Labels and property keys are case-sensitive",
+        "Variables are case-sensitive",
+        "All Cypher queries must be written in lowercase",
+        "Cypher keywords are case-sensitive"
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "You must create a relationship in a specified direction, but you can query it in either direction.\n\nMATCH (a:Person)-[r:PURCHASED]-(b:Product)\nRETURN a, r, b",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How can optional matches be useful in a Neo4j query?",
+      "options": [
+        "Optional matches allow you to specify patterns that may or may not exist in the graph.",
+        "Optional matches are only used for nodes that have a specific property.",
+        "Optional matches force a pattern to exist in the graph, otherwise the query will return an error.",
+        "Optional matches are not supported in Neo4j queries."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements best describes the difference between Cypher and GraphQL?",
+      "options": [
+        "Cypher is a declarative graph query language designed for querying and updating data in Neo4j, while GraphQL is a query language for APIs that allows clients to specify exactly what data they need and is used for building web APIs.",
+        "Cypher is used for data modeling, while GraphQL is used for data querying and retrieval.",
+        "Cypher provides a flexible syntax for requesting data through APIs, while GraphQL is optimized for complex graph traversals and pattern matching in Neo4j.",
+        "Cypher is a query language for relational databases, while GraphQL is a query language specifically designed for graph databases."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     }
