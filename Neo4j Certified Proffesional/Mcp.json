@@ -1,0 +1,63 @@
+{
+  "questions": [
+    {
+      "question": "Complete the code to access the Neo4j driver from the Context object in an MCP tool:\n\n@mcp.tool()\nasync def get_graph_stats(ctx: Context) -> dict:\n\t\"\"\"Get statistics about the graph.\"\"\"\n\tdriver = ctx.request_context.-- select --\n\n\trecords, _, _ = await driver.execute_query(\n\t\t\"RETURN COUNT {()} AS nodes, COUNT {()-[]-()} AS relationships\"\n\t)\n\treturn dict(records[0])",
+      "options": ["lifespan_context.", "lifespan.", "context.", "app_context."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher query that the AI might generate after using the get-neo4j-schema tool to understand the database structure:\n\n-- select -- (u:User)-[r:RATED]->(m:Movie)\nWHERE m.imdbRating > 8.0\nRETURN u.name, m.title, r.rating",
+      "options": ["MATCH.", "SELECT.", "FIND.", "GET."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why does the read-neo4j-cypher tool execute queries within read transactions?",
+      "options": [
+        "To prevent the tool from modifying or deleting data.",
+        "To cache query results.",
+        "To improve query performance.",
+        "To enable parallel query execution.",
+        "To reduce memory usage."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the primary benefit of using the get-neo4j-schema tool before generating Cypher queries?",
+      "options": [
+        "It prevents the LLM from hallucinating incorrect schema elements.",
+        "It backs up the database schema.",
+        "It validates user credentials.",
+        "It reduces the query execution time.",
+        "It optimizes the database indexes."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the role of a Host in the MCP architecture?",
+      "options": [
+        "To manage one or more clients and maintain session state.",
+        "To translate natural language into tool calls.",
+        "To execute Cypher queries against Neo4j databases.",
+        "To store MCP tool definitions in a central registry.",
+        "To provide authentication for MCP servers."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the server configuration to properly pass arguments to the MCP server:\n\n{\n\t\"mcpServers\": {\n\t\t\"neo4j-cypher\": {\n\t\t\t\"command\": \"uvx\",\n\t\t\t-- select --\n\t}\n\t}\n}",
+      "options": [
+        "\"args\": [\"mcp-neo4j-cypher@0.2.3\", \"--transport\", \"stdio\"].",
+        "\"arguments\": \"mcp-neo4j-cypher@0.2.3 --transport stdio\".",
+        "\"parameters\": [\"mcp-neo4j-cypher@0.2.3 --transport stdio\"].",
+        "\"options\": \"mcp-neo4j-cypher@0.2.3 --transport stdio\"."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

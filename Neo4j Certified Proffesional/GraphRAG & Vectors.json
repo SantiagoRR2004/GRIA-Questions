@@ -1,0 +1,159 @@
+{
+  "questions": [
+    {
+      "question": "What is entity linking in the context of knowledge graph creation?",
+      "options": [
+        "Accurately identifying and associating entities with their entries in the knowledge graph.",
+        "Connecting the knowledge graph to external databases.",
+        "Generating hyperlinks in the source documents.",
+        "Creating relationships between entity nodes."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The LLM Graph Builder chatbot can use different RAG approaches to answer questions. Which of the following is NOT one of the supported RAG approaches?",
+      "options": ["SQL2Graph.", "Text2Cypher.", "Vector Search.", "GraphRAG."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the primary purpose of chunking data when constructing a knowledge graph with an LLM?",
+      "options": [
+        "To break down data into right-sized parts for LLM processing.",
+        "To create more relationships in the graph.",
+        "To improve query performance.",
+        "To reduce storage costs in Neo4j."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Why are knowledge graphs important for Generative AI (GenAI) applications?",
+      "options": [
+        "They provide structured context and meaning that GenAI applications need.",
+        "They store model weights more efficiently.",
+        "They automatically generate training data.",
+        "They replace the need for large language models."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement to create or match an entity node from LLM output:\n\n-- select -- (neo4j:GraphDatabase {id: 'Neo4j'})\nMERGE (java:ProgrammingLanguage {id: 'Java'})\nMERGE (neo4j)-[:IMPLEMENTED_IN]->(java)",
+      "options": ["MERGE.", "CREATE.", "MATCH.", "INSERT."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What advantage do knowledge graphs provide by integrating diverse data sources?",
+      "options": [
+        "More holistic view and facilitation of complex queries, analytics, and insights.",
+        "Reduced storage costs.",
+        "Automatic data validation.",
+        "Faster data storage."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following are challenges when creating and maintaining knowledge graphs?",
+      "options": [
+        "Entity resolution and merging duplicates.",
+        "Ensuring data quality, accuracy, and consistency.",
+        "Data collection and integration from various sources.",
+        "LLMs cannot extract entities from unstructured text."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Complete the code to return both the generated answer and the retrieved context from a GraphRAG search:\n\nfrom neo4j_graphrag.generation import GraphRAG\n\nrag = GraphRAG(retriever=retriever, llm=llm)\n\nresponse = rag.search(\n\tquery_text=\"What is a knowledge graph?\",\n\t-- select --\n)\n\nprint(response.answer)\nprint(response.retriever_result)",
+      "options": [
+        "return_context=True.",
+        "include_context=True.",
+        "with_context=True.",
+        "show_context=True."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the code to configure SimpleKGPipeline to process a PDF file:\n\nfrom neo4j_graphrag.experimental.pipeline.kg_builder import SimpleKGPipeline\n\nkg_builder = SimpleKGPipeline(\n\tllm=llm,\n\tdriver=neo4j_driver,\n\tembedder=embedder,\n\t-- select --\n)\n\nawait kg_builder.run_async(file_path=str(file_path))",
+      "options": [
+        "from_pdf=True.",
+        "file_type=\"pdf\".",
+        "input_format=\"pdf\".",
+        "parse_pdf=True."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the batch_size parameter control in the Neo4jWriter component?\n\nfrom neo4j_graphrag.experimental.components.kg_writer import Neo4jWriter\n\nwriter = Neo4jWriter(driver, batch_size=1000)  # Default is 1000\nawait writer.run(graph)",
+      "options": [
+        "The number of nodes or relationships inserted per batch during database writes.",
+        "The maximum number of entities the LLM can extract from each chunk.",
+        "The number of text documents processed before committing the transaction.",
+        "The number of chunks processed simultaneously during entity extraction."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the code to automatically extract a schema from text using an LLM:\n\nfrom neo4j_graphrag.experimental.components.schema import -- select --\nfrom neo4j_graphrag.llm import OpenAILLM\n\nschema_extractor = SchemaFromTextExtractor(\n\tllm=OpenAILLM(\n\t\tmodel_name=\"gpt-5-mini\",\n\t\tmodel_params={\n\t\t\t\"reasoning_effort\": \"minimal\"\n\t\t}\n\t),\n\tuse_structured_output=True,\n)\n\nextracted_schema = await schema_extractor.run(text=\"Some text\")",
+      "options": [
+        "SchemaFromTextExtractor.",
+        "AutoSchemaBuilder.",
+        "LLMSchemaExtractor.",
+        "SchemaGenerator."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What makes RAG systems provide better responses than LLMs alone?",
+      "options": [
+        "RAG systems provide responses that are contextually aware and grounded in real information.",
+        "RAG systems use larger language models.",
+        "RAG systems generate responses faster.",
+        "RAG systems require less computational power."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In the GraphSchema configuration, what happens when additional_properties=False is set for a node or relationship type?",
+      "options": [
+        "Only properties defined in the schema are retained; all others are removed.",
+        "The LLM is prevented from extracting any properties for that type.",
+        "The node or relationship is removed from the graph if it has extra properties.",
+        "All properties are removed from the node or relationship during graph construction."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the primary benefit of enabling structured output mode (use_structured_output=True) in the LLMEntityRelationExtractor with OpenAI or Vertex AI?\n\nfrom neo4j_graphrag.experimental.components.entity_relation_extractor import (\n\tLLMEntityRelationExtractor,\n)\nfrom neo4j_graphrag.llm import OpenAILLM\n\nllm = OpenAILLM(\n\tmodel_name=\"gpt-5-mini\",\n\tmodel_params={\n\t\t\"reasoning_effort\": \"minimal\"\n\t}\n)\nextractor = LLMEntityRelationExtractor(llm=llm, use_structured_output=True)",
+      "options": [
+        "It passes the Pydantic model as response_format ensuring automatic type validation.",
+        "It reduces API costs by using fewer tokens in the response.",
+        "It enables parallel processing of multiple chunks simultaneously.",
+        "It generates more entities and relationships from the same text."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the code to exclude entities with a :Resolved label from the entity resolution process:\n\nfrom neo4j_graphrag.experimental.components.resolver import (\n\tSinglePropertyExactMatchResolver,\n)\n\n-- select --\n\nresolver = SinglePropertyExactMatchResolver(\n\tdriver,\n\tfilter_query=filter_query\n)\n\nres = await resolver.run()",
+      "options": [
+        "filter_query = \"WHERE NOT entity:Resolved\".",
+        "exclude_labels = [\"Resolved\"].",
+        "filter_resolved = True.",
+        "skip_query = \"entity:Resolved\"."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

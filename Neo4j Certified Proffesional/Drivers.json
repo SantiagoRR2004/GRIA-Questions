@@ -104,6 +104,12 @@
       "options": ["True.", "False."],
       "correct_option": 1,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Python code to create a Neo4j driver instance:\n\nfrom neo4j import GraphDatabase\n\ndriver = GraphDatabase.-- select --\n\turi,\n\tauth=(username, password)\n)",
+      "options": ["driver(.", "connect(.", "create_driver(.", "new_driver(."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
