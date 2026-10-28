@@ -448,6 +448,34 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What data type does the ai.text.embed() function return when creating a vector embedding?\n\nMATCH (m:Movie {title:'Godfather, The'})\nWITH m, ai.text.embed(m.plot, 'OpenAI', { token: $token, model: 'text-embedding-3-small' }) AS vector\nSET m.embedding = vector  // Stores as VECTOR type\nRETURN m.embedding",
+      "options": ["VECTOR.", "STRING.", "MAP.", "LIST."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following options that are returned by the ai.text.chat() function?",
+      "options": [
+        "message: STRIN.",
+        "chatId.",
+        "text: STRING.",
+        "threadId: STRING."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the code to display all supported embedding providers and their configuration options:\n\n-- select --()\nYIELD provider, configuration\nRETURN provider, configuration",
+      "options": [
+        "CALL ai.text.embed.providers.",
+        "RETURN ai.text.embed.providers.",
+        "CALL ai.embedding.listProviders.",
+        "WITH ai.providers.list."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

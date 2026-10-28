@@ -105,6 +105,114 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "How are relationships treated in graph databases compared to other database technologies?",
+      "options": [
+        "Relationships are treated with the same importance as the nodes they connect.",
+        "Relationships are computed at query time using indexes.",
+        "Relationships are optional and rarely used.",
+        "Relationships are stored as foreign keys in separate tables."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When importing data into Neo4j, how should you organize your data model?",
+      "options": [
+        "Represent entities as labeled nodes and connections as relationships.",
+        "Store all information as properties on a single node type.",
+        "Use only relationships without labels to keep the model flexible.",
+        "Store relationships as properties instead of using relationship structures."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What type of input does a retriever typically take, and what does it search for?",
+      "options": [
+        "Unstructured input (questions/prompts), searches for structured data.",
+        "SQL queries, searches for SQL tables.",
+        "Binary input, searches for binary data.",
+        "Structured input, searches for unstructured data."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Neo4j, what grammatical form should node labels typically take?",
+      "options": [
+        "Singular noun (e.g., Person, Product, Event).",
+        "Verb (e.g., Creates, Owns, Manages).",
+        "Adjective (e.g., Active, Primary, Valid).",
+        "Plural noun (e.g., Persons, Products, Events)."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Neo4j, do all relationships have a direction?",
+      "options": [
+        "Yes, all relationships have a direction that is stored when created.",
+        "Direction is optional and depends on the query pattern.",
+        "No, relationships can be created without direction.",
+        "Only relationships with certain types require direction."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "According to Neo4j best practices, which of the following would be the MOST effective node labels for a graph database? (Select all that apply)",
+      "options": [
+        "Person.",
+        "Product.",
+        "Location.",
+        "People.",
+        "has_multiple_addresses.",
+        "WORKS_AT."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How are organizing principles stored in a knowledge graph?",
+      "options": [
+        "As nodes in the graph alongside the actual data.",
+        "In database metadata only.",
+        "In external documentation.",
+        "In separate configuration files."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the graph pattern to define a schema in the LLM Graph Builder:\n\n-- select --\n(Technology)-[:HAS]->(Capability)\n(Technology)-[:ENABLES]->(Benefit)",
+      "options": [
+        "(Technology)-[:RELATED_TO]->(Technology).",
+        "(Technology)-[RELATED_TO]->(Technology).",
+        "Technology-[:RELATED_TO]->Technology.",
+        "[Technology]-[:RELATED_TO]->[Technology]."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Neo4j, relationship types should represent which of the following?",
+      "options": [
+        "Hierarchies like PARENT_OF or DEPENDS_ON.",
+        "Personal connections like KNOWS or MARRIED_TO.",
+        "Facts like LIVES_IN or OWNS.",
+        "Properties like firstName or age.",
+        "Node labels like Person or Company."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What is the default label applied to all extracted entities in the SimpleKGPipeline before a schema is defined?\n\nMATCH (e:__Entity__)\nRETURN e",
+      "options": ["+Entity+.", "DefaultEntity.", "Node.", "Entity."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

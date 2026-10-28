@@ -1,0 +1,65 @@
+{
+  "questions": [
+    {
+      "question": "In MATCH … SEARCH … VECTOR INDEX … LIMIT k, what does LIMIT k specify?\n\nMATCH (q:Question)\n\tSEARCH q IN (\n\t\tVECTOR INDEX question_embeddings\n\t\tFOR $embedding\n\t\tLIMIT 10\n\t)\nRETURN q",
+      "options": [
+        "The number of results to return (top k).",
+        "The minimum similarity score threshold.",
+        "The vector index dimensions.",
+        "The similarity function to use."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Python code to create an embedding using the OpenAI API:\n\nfrom openai import OpenAI\n\nclient = OpenAI(api_key=api_key)\n\nresponse = client.embeddings.-- select --\n\tmodel=\"text-embedding-ada-002\",\n\tinput=\"What is a knowledge graph?\"\n)\n\nembedding = response.data[0].embedding",
+      "options": ["create.", "generate.", "get_embedding."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following are valid strategies for chunking text data?",
+      "options": [
+        "N-Grams - creating chunks of n consecutive words or characters.",
+        "Size - splitting data into equal-sized chunks.",
+        "Topic Segmentation - dividing text based on topic changes.",
+        "Randomization - splitting text at random positions."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What do knowledge graphs provide to enable comprehensive understanding of information?",
+      "options": [
+        "Structured representation of entities, attributes, and their relationships.",
+        "Only unstructured text documents.",
+        "Pre-computed query results for all possible questions.",
+        "Only hierarchical parent-child relationships."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the tradeoff between vector dimensionality and performance?",
+      "options": [
+        "Higher dimensionality captures more meaning but is computationally expensive.",
+        "Lower dimensionality captures more meaning.",
+        "Dimensionality doesn't affect performance.",
+        "Higher dimensionality is always better."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher statement below to create a vector index on the embedding property of Question nodes:\n\n-- select --\nFOR (q:Question)\nON q.embedding\nOPTIONS {indexConfig: {\n\t`vector.dimensions`: 1536,\n\t`vector.similarity_function`: 'cosine'\n}}",
+      "options": [
+        "CREATE VECTOR INDEX question_embeddings.",
+        "CREATE INDEX question_embeddings.",
+        "CREATE VECTOR question_embeddings.",
+        "VECTOR INDEX question_embeddings."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

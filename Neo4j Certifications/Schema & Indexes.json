@@ -123,6 +123,28 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What is O(n) notation in the context of relational databases when dealing with relationships?",
+      "options": [
+        "Join operations slow down as indexes grow larger with more data.",
+        "Queries can only join a maximum of N tables.",
+        "The number of tables grows linearly with data.",
+        "Each relationship requires N foreign keys."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the primary purpose of a vector index in Neo4j for RAG?",
+      "options": [
+        "To perform approximate nearest-neighbor search over embedding vectors so that semantically similar chunks or entities can be retrieved efficiently.",
+        "To store raw text only.",
+        "To replace all other indexes (e.g. property indexes).",
+        "To enforce uniqueness of node labels."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

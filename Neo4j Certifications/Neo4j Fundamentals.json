@@ -156,6 +156,51 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following best describes a graph database in the context of building RAG applications?",
+      "options": [
+        "A database that stores data as nodes (entities) and relationships (connections between entities).",
+        "A database that stores only full-text indexes for keyword search.",
+        "A database that stores only vector embeddings for semantic search.",
+        "A database that stores data in tables with rows and columns."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In a Cypher pattern, what symbol is used to represent nodes?",
+      "options": [
+        "Parentheses ().",
+        "Square brackets [].",
+        "Curly braces {}.",
+        "Angle brackets <>."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What are the three main steps in the Retrieval-Augmented Generation (RAG) process?",
+      "options": [
+        "Understand the user query, retrieve relevant information, and generate a response using the retrieved information.",
+        "Create a knowledge graph, index all data, and return the first matching result.",
+        "Train the model, generate embeddings, and store results in a database.",
+        "Convert text to vectors, calculate similarity scores, and rank all possible responses."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the WHERE clause to find movies released after the year 2000:\n\nMATCH (m:Movie)\nWHERE m.released -- select --\nRETURN m.title, m.released",
+      "options": ["> 2000.", ">= 2000.", "= 2000.", "< 2000."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher query to query a vector index named plotEmbeddings for the 5 most similar nodes:\n\nMATCH (m:Movie)\n\t-- select -- m IN (\n\t\tVECTOR INDEX plotEmbeddings\n\t\tFOR myEmbedding\n\t\tLIMIT 5\n\t) SCORE AS score\nRETURN m, score",
+      "options": ["SEARCH.", "CALL.", "FILTER.", "WITH."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
