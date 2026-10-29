@@ -1,0 +1,239 @@
+{
+  "questions": [
+    {
+      "question": "How do you run the PageRank algorithm with stream mode on a graph named pageRankGraph? The relationship weight is stored in the weight property.",
+      "options": [
+        "gds.pageRank.stream('pageRankGraph', {relationshipWeightProperty: 'weight'}).",
+        "gds.pageRank.stream({nodeQuery: 'Person', relationshipQuery:'INTERACTS', relationshipProperties:['weight']}).",
+        "gds.pageRank.stream({nodeProjection:'Person', relationshipProjection:'INTERACTS', graphName: 'pageRankGraph', relationshipWeightProperty:'weight'}).",
+        "gds.pageRank.stream({'pageRankGraph'})."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the run time for calculating the Betweenness Centrality (where n = number of nodes and m = number of relationships)?",
+      "options": ["O(n*m).", "O(n+m).", "O(n).", "O(m)."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which algorithm is used to determine the \"middleman\" or the bridge nodes in a network that might be used to connect parts of a graph?",
+      "options": [
+        "Betweenness Centrality.",
+        "Weakly Connected Components.",
+        "Bridge.",
+        "Local Clustering Coefficient."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which metrics can the Node Similarity algorithm use to compare the similarity between a pair of nodes?",
+      "options": [
+        "Overlap Similarity.",
+        "Jaccard Similarity score.",
+        "Triangle Count.",
+        "Euclidean Distance."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What algorithm do you use to calculate the number of triangles each node belongs to?",
+      "options": [
+        "Triangle Count.",
+        "Betweenness Centrality.",
+        "Harmonic Centrality.",
+        "Louvain Modularity."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following Community Detection algorithms permit the initial seeding of communities?",
+      "options": [
+        "Louvain.",
+        "Weakly Connected Components.",
+        "Label Propagation.",
+        "Triangle Count."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which of these algorithms is not a Community Detection algorithm?",
+      "options": [
+        "PageRank algorithm.",
+        "Louvain Modularity.",
+        "Label Propagation algorithm.",
+        "Weakly Connected Components."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which types of node properties can the K-Nearest Neighbors algorithm function on?",
+      "options": [
+        "List of floating-point numbers.",
+        "List of integers.",
+        "Scalar numeric property.",
+        "String properties."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which columns does the gds.pageRank.stream() procedure yield?",
+      "options": ["score.", "nodeId.", "node.", "pageRank."],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What is the difference between the PageRank and Degree Centrality algorithms?",
+      "options": [
+        "The PageRank algorithm takes into account both the number of links a node has, as well as the importance of the linking nodes.",
+        "The Degree Centrality algorithm takes into account both the number of links a node has, as well as the importance of the linking nodes.",
+        "The PageRank algorithm is used to find the community structure of the network, while Degree Centrality is used to find the importance of nodes.",
+        "They are identical."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What algorithm supports hierarchical community detection?",
+      "options": [
+        "Louvain Modularity.",
+        "Weakly Connected Components.",
+        "Label Propagation.",
+        "Local Clustering Coefficient."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How does ArticleRank differ from PageRank?",
+      "options": [
+        "ArticleRank reduces the impact of the assumption that relationships from nodes with low out-degree are more important than relationships with nodes with a higher out-degree.",
+        "ArticleRank measures the transitive influence or connectivity of nodes while PageRank does not.",
+        "PageRank includes a damping factor, whereas ArticleRank does not.",
+        "It doesn't. This is just a different term for the same concept."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The Neo4j implementation of Betweenness Centrality supports weighted graphs.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How is the Jaccard Similarity score calculated?",
+      "options": [
+        "Intersection of two sets divided by the union of sets.",
+        "Union of two sets divided by the intersections of sets.",
+        "Union of sets.",
+        "Intersection of sets."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How much space is required for calculating Betweenness Centrality (where n = number of nodes and m = number of relationships)?",
+      "options": ["O(n+m).", "O(n*m).", "O(n).", "O(m)."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When using Louvain to calculate community clusters, the intermediate clusters prior to cluster stability are available.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "The PageRank calculation automatically takes edge weighting into account when calculating the score.",
+      "options": ["True.", "False."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What method can be used to decrease the run time of the Betweenness Centrality algorithm?",
+      "options": [
+        "Use the samplingSize parameter to decrease the number of source nodes to sample - thereby approximating results by computing the single-source shortest paths for a subset of nodes.",
+        "Use relationship weights to prioritize more influential connections.",
+        "Use streaming mode versus write or mutate.",
+        "Use the samplingSize parameter to increase the number of source nodes to sample - thereby approximating results rather than using single-source shortest paths."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of these algorithms only work on undirected graphs?",
+      "options": [
+        "Triangle Count.",
+        "Local Clustering Coefficient.",
+        "Betweenness Centrality.",
+        "Louvain Modularity."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Node Similarity can take advantage of edge weighting.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Centrality algorithms can be used to:",
+      "options": [
+        "Find the most influential nodes.",
+        "Find the bridge nodes in a network.",
+        "Find the shortest path.",
+        "Examine community structure."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "The Neo4j implementation of Weakly Connected Components ignores direction in the graph.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which parameters can be used to define the sampling technique when you use the approximate Betwenness Centrality algorithm?",
+      "options": [
+        "samplingSize.",
+        "samplingSeed.",
+        "relationshipWeightProperty.",
+        "writeProperty."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which community detection algorithm is based on the intuition that a single community label can quickly become dominant in a densely connected group of nodes but will have trouble crossing sparsely connected regions in the graph?",
+      "options": [
+        "Label Propagation.",
+        "Triangle Count.",
+        "Louvain.",
+        "Weakly Connected Components."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What type of algorithms should you use to convert a graph to a low-dimensional vector representation of the nodes?",
+      "options": [
+        "Node Embeddings.",
+        "Node.",
+        "Node Vectorization.",
+        "Node Tensors."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}
