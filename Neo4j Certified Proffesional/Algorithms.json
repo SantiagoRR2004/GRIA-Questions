@@ -234,6 +234,40 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Suppose you are working with a complete graph, where each node is linked to all the other nodes in the graph. What is the average Local Clustering Coefficient of this graph?",
+      "options": ["1.", "0.5.", "0.", "-1."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you use native projection to load a named graph that contains Person nodes with the FRIEND relationships between them? The relationships should be treated as undirected.",
+      "options": ["gds.graph.project(.", "gds.graph.create(."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you execute the Louvain Modularity algorithm and stream the intermediate communities as the result?",
+      "options": [
+        "gds.louvain.stream('my-graph', {includeIntermediateCommunities: true}).",
+        "gds.louvain.stream('my-graph', {mode:'hierarchical'}).",
+        "gds.louvain.stream('my-graph', {stream: 'intermediate'}).",
+        "gds.louvain.stream('my-graph', {includeIntermediateCommunities: false})."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What algorithm do you use to find disconnected parts of the network?",
+      "options": [
+        "Weakly Connected Components.",
+        "Triangle Count.",
+        "Harmonic Centrality.",
+        "Local Clustering Coefficient."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
