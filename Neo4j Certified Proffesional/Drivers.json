@@ -25,13 +25,13 @@
     },
     {
       "question": "When using a language driver, a statement of results comprises a stream of...",
-      "options": ["records.", "entries."],
+      "options": ["records.", "entries.", "rows.", "nodes."],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
     {
-      "question": "When working with DateTime values in the driver, which of the following is the correct import statement?",
-      "options": ["from neo4j.time import DateTime."],
+      "question": "When working with DateTime values in the driver, which of the following is the correct import statement?\n\nfrom neo4j.time import -- select --",
+      "options": ["DateTime.", "Calendar.", "Duration."],
       "correct_option": 0,
       "questionType": "singleChoice"
     },

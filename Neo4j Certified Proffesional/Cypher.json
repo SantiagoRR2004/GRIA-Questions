@@ -108,7 +108,10 @@
     {
       "question": "Consider these two similar-looking queries:\n\n// Query 1: Single MATCH\nMATCH (p:Person {name: \"Al Pacino\"})-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(costar)\nRETURN costar.name\nORDER BY count(m) DESC, costar.name\nLIMIT 1;\n\n// Query 2: Separate MATCH clauses\nMATCH (p:Person {name: \"Al Pacino\"})-[:ACTED_IN]->(m:Movie)\nMATCH (m)<-[:ACTED_IN]-(costar)\nRETURN costar.name\nORDER BY count(m) DESC, costar.name\nLIMIT 1;\n\nQuery 1 never returns Al Pacino as a costar, but Query 2 can. Why?",
       "options": [
-        "Each MATCH clause has its own relationship uniqueness scope, so the same ACTED_IN relationship can be reused and Al Pacino can be matched as a costar."
+        "Each MATCH clause has its own relationship uniqueness scope, so the same ACTED_IN relationship can be reused and Al Pacino can be matched as a costar.",
+        "LIMIT is applied before filtering out Al Pacino in the second query.",
+        "The second query omits relationship direction, so Al Pacino is included.",
+        "The second query uses a different ORDER BY, so Al Pacino appears."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -473,6 +476,73 @@
         "RETURN ai.text.embed.providers.",
         "CALL ai.embedding.listProviders.",
         "WITH ai.providers.list."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Cypher, what is the primary purpose of the WITH clause?",
+      "options": [
+        "To divide the query into multiple parts, allowing intermediate results to be passed to the next part of the query.",
+        "To filter nodes and relationships before returning results.",
+        "To create and return new nodes and relationships in the database.",
+        "To specify the database to execute the query on."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Say you have a database with a unique constraint on the .name property for the (:Person) label.\n\nYou run the following Cypher statement twice:\n\nMERGE (p:Person {name: \"Michelle Yeoh\", createdAt: datetime()})\n\nWhat happens when the statement is run the second time?",
+      "options": [
+        "A Neo.ClientError.Schema.ConstraintViolation error will be thrown.",
+        "Two nodes will be created with the same name property but different createdAt properties.",
+        "A single node will be created with the createdAt property set to the latest datetime value.",
+        "The database will crash and all changes will be lost."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Say you run the following Cypher statement on an empty database to create a new (:Movie) node.\n\nCREATE (:Movie {title: \"Barbie\"})\n\nThen, you immediately run the following MERGE Cypher statement.\n\nMERGE (p:Person {name: \"Margot Robbie\"})-[:ACTED_IN]-(m:Movie {title: \"Barbie\"})\n\nHow many nodes will exist in your database?",
+      "options": [
+        "Three nodes, one (:Person) and two (:Movie).",
+        "None, you need to create a schema first.",
+        "Four nodes, two (:Person) and two (:Movie).",
+        "Two nodes, one (:Movie) and one (:Person)."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the variable scope clause so the subquery can use the movie node m from the enclosing query.\n\nMATCH (m:Movie)\nCALL -- select -- {\n\tMATCH (m)<-[r:RATED]-(u:User)\n\tWHERE r.rating = 5\n\tRETURN count(u) AS numReviews\n}\nRETURN m.title, numReviews",
+      "options": ["(m)."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Cypher pattern to match Person nodes connected by KNOWS relationships:\n\nMATCH (p1:Person)-- select --(p2:Person)\nRETURN p1.name, p2.name",
+      "options": ["-[:KNOWS]-.", "-->[:KNOWS].", "-[KNOWS]->.", "[:KNOWS]."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Cypher, which clause is used to read data from the graph and specify what to return?",
+      "options": [
+        "MATCH ... RETURN.",
+        "MERGE ... SET.",
+        "CREATE ... RETURN.",
+        "WITH ... CREATE."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What data type does the ai.text.completion() function return?\n\nWITH\n\t{\n\t\ttoken: $openaiToken,\n\t\tmodel: 'gpt-5.2',\n\t\tvendorOptions: { instructions: 'Be concise.' }\n\t} AS config\nRETURN ai.text.completion(\n\t'Recommend a science fiction movie',\n\t'openai',\n\tconfig\n) AS result  // Returns STRING",
+      "options": [
+        "STRING containing the generated text.",
+        "LIST with multiple response variations.",
+        "MAP containing the response and metadata.",
+        "VECTOR representing the semantic meaning."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"

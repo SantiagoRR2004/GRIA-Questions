@@ -1,0 +1,374 @@
+Arrange the fragments to build a query that returns the Person node whose name is 'Tom Hanks'.
+
+Your answer
+MATCH (p:Person)
+WHERE p.name = 'Tom Hanks'
+RETURN p
+
+#############################################################################################################
+
+Complete the query so each person is returned with the number of movies they acted in, using a COUNT subquery.
+
+MATCH (p:Person)
+RETURN p.name,
+  COUNT { (p)-[:ACTED_IN]->(:Movie) } AS movies
+
+Your answer
+count
+
+#############################################################################################################
+
+How many Movie nodes are in the database?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+9125
+You can find the answer by using a COUNT subquery.
+
+RETURN count { (:Movie) } as count
+
+#############################################################################################################
+
+What is the name of the actor whose name contains "Tom" and has appeared in the most movies released in 2010 or later?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Tom Hardy
+To answer this question, you need to:
+
+Match actors to movies
+Filter for actors with "Tom" in their name
+Filter for movies released in 2010 or later
+Count movies per actor
+Order by count and take the top result
+Here's a query that will help you find the answer:
+
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)
+WHERE a.name CONTAINS 'Tom' AND m.year >= 2010
+WITH a, COUNT(m) as movieCount
+RETURN a.name, movieCount
+ORDER BY movieCount DESC
+LIMIT 1
+
+###############################################################################################################
+
+How many Actor nodes are in the database?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+15443
+You can find the answer by using a COUNT subquery.
+
+RETURN count { (:Actor) } as count
+
+#############################################################################################################
+
+What percentage of people in the database are directors? Round to 2 decimal places.
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+21.48
+To answer this question, you need to:
+
+Count all Director nodes
+Count all Person nodes
+Calculate the percentage by dividing director count by person count
+Multiply by 100 to convert to percentage
+Round to 2 decimal places
+Here's a query that will help you find the answer:
+
+RETURN round(100.0 * COUNT {(:Director)} / COUNT {(:Person)}, 2) as percentage
+
+##############################################################################################################
+
+What is the name of the actor who appeared in the most movies released in the 1990s (1990-1999)?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Bruce Willis
+To answer this question, you need to:
+
+Match actors to movies
+Filter for movies released between 1990 and 1999
+Count the number of movies per actor
+Order by count and take the top result
+Here's a query that will help you find the answer:
+
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)
+WHERE m.year >= 1990 AND m.year < 2000
+WITH a, COUNT(DISTINCT m) as moviesIn90s
+RETURN a.name, moviesIn90s
+ORDER BY moviesIn90s DESC
+LIMIT 1
+
+###############################################################################################################
+
+What is the name of the director with the longest career span (measured by years between their first and last directed movie), considering only directors who have directed at least 10 movies?
+
+Find the earliest and latest movie years for each director
+
+Calculate the span between them
+
+Filter for directors with sufficient movies
+
+Order by career span
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Roman Polanski
+To answer this question, you need to:
+
+Match directors to their movies
+Filter out movies without year information
+Find the minimum and maximum year for each director
+Count their total movies
+Filter for directors with at least 10 movies
+Calculate the career span
+Order by span and take the top result
+
+Here's a query that will help you find the answer:
+
+MATCH (d:Director)-[:DIRECTED]->(m:Movie)
+WHERE m.year IS NOT NULL
+WITH d, min(m.year) as firstYear, max(m.year) as lastYear, COUNT(m) as movieCount
+WHERE movieCount >= 10
+WITH d, lastYear - firstYear as careerSpan, movieCount
+RETURN d.name, careerSpan, movieCount
+ORDER BY careerSpan DESC
+LIMIT 1
+
+################################################################################################################
+
+Build a batched import
+
+Arrange the fragments to import people.csv in batches of 500 rows.
+
+Your answer
+LOAD CSV WITH HEADERS FROM 'file:///people.csv' AS row
+CALL (row) {
+MERGE (p:Person {id: row.id})
+} IN TRANSACTIONS OF 500 ROWS
+
+LOAD CSV streams rows into a CALL (row) subquery, and IN TRANSACTIONS OF 500 ROWS commits the work in batches.
+
+################################################################################################################
+
+How many User nodes are in the database?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+671
+You can find the answer by using a COUNT subquery.
+
+RETURN count { (:User) } as count
+
+
+################################################################################################################
+
+How many Director nodes are in the database?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+4091
+The answer is 4091. There are 4091 Director nodes in the database.
+
+To find this answer, we need to run a Cypher statement that counts all Director nodes:
+
+RETURN count { (:Director) } as count
+
+################################################################################################################
+
+What is the highest-rated movie in the database based on to the imdbRating property?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Band of Brothers
+The answer is "Band of Brothers". This movie has an IMDB rating of 9.6, making it the highest-rated movie in the database.
+
+To find this answer, we need to run a Cypher statement that looks at all movies and orders them by their IMDB rating:
+
+MATCH (m:Movie)
+WHERE m.imdbRating IS NOT NULL
+RETURN m.title as movie, m.imdbRating as rating
+ORDER BY m.imdbRating DESC
+LIMIT 5
+
+################################################################################################################
+
+What is the name of the actor who has co-starred with Tom Hanks in the most movies?
+
+In the event of a tie, return the first actor by their name in alphabetical order.
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Tim Allen
+The answer is "Tim Allen". He has co-starred with Tom Hanks in 4 movies, making him Hanks' most frequent co-star.
+
+To find this answer, we need to run a Cypher statement that finds co-stars:
+
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(b:Actor)
+WHERE a.name = 'Tom Hanks' AND a <> b
+WITH b, COUNT(DISTINCT m) as collaborations
+RETURN b.name, collaborations
+ORDER BY collaborations DESC, b.name ASC
+LIMIT 1
+
+################################################################################################################
+
+What is the name of the actor who has appeared in the most movies with an imdbRating of 8.0 or higher?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+James Stewart
+The answer is "James Stewart". He has appeared in 10 movies with an IMDB rating of 8.0 or higher, making him the actor with the most highly-rated films in the database.
+
+To find this answer, we need to run a Cypher statement that filters by rating and counts:
+
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)
+WHERE m.imdbRating >= 8.0
+WITH a, COUNT(m) as highRatedCount
+RETURN a.name, highRatedCount
+ORDER BY highRatedCount DESC
+LIMIT 1
+
+################################################################################################################
+
+What is the name of the Marx brother (actor whose name ends with "Marx") has the highest average user rating through RATED relationships across all their movies? Only consider actors who have received at least 10 total user ratings.
+
+In the event of a tie, return the actor whose name comes first alphabetically.
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Zeppo Marx
+The answer is "Zeppo Marx". His movies have an average user rating of 4.04 from 53 total RATED relationships, making him the highest-rated Marx brother based on user ratings in the database.
+
+To find this answer, we need to run a Cypher statement that follows user RATED relationships to movies:
+
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)<-[r:RATED]-(u:User)
+WHERE a.name ENDS WITH 'Marx'
+WITH a, AVG(r.rating) as avgRating, COUNT(r) as numRatings
+WHERE numRatings >= 10
+RETURN a.name as actor,
+       round(avgRating * 100) / 100 as avgRating,
+       numRatings
+ORDER BY avgRating DESC, actor ASC
+LIMIT 5
+
+#################################################################################################################
+
+How many Person nodes are in the database?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+19047
+The answer is 19047. There are 19047 Person nodes in the database.
+
+To find this answer, we need to run a Cypher statement that counts all Person nodes:
+
+RETURN count { (:Person) } as count
+
+#################################################################################################################
+
+What percentage of people in the database are actors? Round to 2 decimal places.
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+81.08
+The answer is 81.08. Approximately 81.08% of people in the database are actors, meaning they have the Actor label.
+
+To find this answer, we need to run a Cypher statement that calculates the proportion:
+
+RETURN round(100.0 * COUNT {(:Actor)} / COUNT {(:Person)}, 2) as percentage
+
+#################################################################################################################
+
+How many movies has Darlene Garcia given a perfect 5.0 rating?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+To answer this question, you need to:
+
+Match the specific user "Darlene Garcia"
+Follow her RATED relationships to movies
+Filter for ratings equal to 5.0
+Count the number of movies
+Here's a query that will help you find the answer:
+
+MATCH (u:User {name: 'Darlene Garcia'})-[r:RATED]->(m:Movie)
+WHERE r.rating = 5.0
+RETURN COUNT(m) as fiveStarCount
+
+#################################################################################################################
+
+What is the name of the person who has both acted in and directed the most movies?
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Clint Eastwood
+To answer this question, you need to:
+
+Match people who acted in movies
+Also match the same person directing the same movies
+Count the number of movies where they did both
+Order by count and take the top result
+Here's a query that will help you find the answer:
+
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+MATCH (p)-[:DIRECTED]->(m)
+WITH p, COUNT(m) as dualRole
+RETURN p.name, dualRole
+ORDER BY dualRole DESC
+LIMIT 1
+
+#################################################################################################################
+
+What is the name of the actor who has appeared in movies spanning the most different genres, considering only actors with at least 20 movies? In case of a tie in genre count, consider the actor with the most total movies.
+
+Match actors to their movies and genres
+
+Count distinct genres per actor
+
+Count total movies per actor
+
+Filter for sufficient movie count
+
+Order by genre diversity, then total movie count
+
+Use the integrated Query window to the right to execute a Cypher statement to find the answer. Once you have the answer, copy and paste it Cypher statement into the input field below. The field is case insensitive and starting and ending quotes will be stripped.
+
+Your answer
+Samuel L. Jackson
+To answer this question, you need to:
+
+Match actors to movies to genres
+Count distinct genres per actor
+Count total movies per actor
+Filter for actors with at least 20 movies
+Order by genre count first, then by movie count for ties
+Take the top result
+Here's a query that will help you find the answer:
+
+MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)-[:IN_GENRE]->(g:Genre)
+WITH a, COUNT(DISTINCT g) as genreCount, COUNT(m) as movieCount
+WHERE movieCount >= 20
+RETURN a.name, genreCount, movieCount
+ORDER BY genreCount DESC, movieCount DESC
+LIMIT 1
+
+#################################################################################################################

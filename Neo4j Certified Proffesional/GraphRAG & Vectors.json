@@ -154,6 +154,139 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the code to pass a top_k parameter to the retriever through the GraphRAG search method:\n\nfrom neo4j_graphrag.generation import GraphRAG\n\nrag = GraphRAG(retriever=retriever, llm=llm)\n\nresponse = rag.search(\n\tquery_text=\"What is a knowledge graph?\",\n\t-- select --\n)",
+      "options": [
+        "retriever_config={\"top_k\": 5}.",
+        "config={\"top_k\": 5}.",
+        "retriever_params={\"top_k\": 5}.",
+        "top_k=5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What should a prompt instruct the LLM to do when extracting nodes and relationships?",
+      "options": [
+        "Identify entities in the text.",
+        "Format output as JSON or structured format.",
+        "Extract relationships between entities.",
+        "Delete irrelevant information.",
+        "Generate new fictional entities."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which of the following are benefits of using knowledge graphs in Generative AI applications?",
+      "options": [
+        "Improved search and discovery through semantic relationships.",
+        "Enhanced decision making through interconnected data.",
+        "Enhanced data integration from disparate sources.",
+        "Guarantees 100% accurate LLM responses."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Why is RAG particularly useful for providing up-to-date information?",
+      "options": [
+        "It retrieves current information from external sources at query time.",
+        "It predicts future information based on patterns.",
+        "It stores all possible future information in advance.",
+        "It automatically retrains the LLM daily."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the code to pass the user's question to the GraphRAG search method:\n\nfrom neo4j_graphrag.generation import GraphRAG\n\nrag = GraphRAG(\n\tretriever=retriever,\n\tllm=llm\n)\n\nuser_question = \"What is a knowledge graph?\"\nresponse = rag.search(-- select --)",
+      "options": [
+        "query_text=user_question.",
+        "question=user_question.",
+        "query=user_question.",
+        "text=user_question."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the Text2CypherRetriever component do?",
+      "options": [
+        "Uses an LLM to convert natural language questions into Cypher queries.",
+        "Translates text chunks into Cypher CREATE statements.",
+        "Embeds Cypher queries as vectors for similarity search.",
+        "Converts Cypher query results into natural language text."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "You have a schema with additional_patterns=False. What happens when the LLM extracts a relationship pattern that is not explicitly defined in the schema's patterns list?\n\nPATTERNS = [\n\t(\"Person\", \"PARENT_OF\", \"Person\"),\n\t(\"Person\", \"HEIR_OF\", \"House\"),\n\t(\"House\", \"RULES\", \"Planet\"),\n]\n\nschema = {\n\t\"patterns\": PATTERNS,\n\t\"additional_patterns\": False,  # Only defined patterns allowed\n}",
+      "options": [
+        "The relationship is removed from the graph during the pruning phase.",
+        "The relationship is kept but marked as unvalidated in the database.",
+        "The pattern is automatically added to the schema for future processing.",
+        "The entire graph construction fails with a validation error."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is a key performance consideration when using ai.text.embed() to create embeddings for multiple nodes?\n\n// Inefficient: One API call per movie\nMATCH (m:Movie) LIMIT 100\nWITH m, ai.text.embed(m.plot, 'OpenAI', $config) AS vector\nSET m.embedding = vector\n\n// Efficient: One API call for batch\nMATCH (m:Movie) LIMIT 100\nWITH collect(m) AS movies, [m IN collect(m) | m.plot] AS batch\nCALL ai.text.embedBatch(batch, 'OpenAI', $config) YIELD index, vector\n// Process results...",
+      "options": [
+        "It sends one API request every time it is called, which may result in high overhead.",
+        "It automatically batches all requests into a single API call.",
+        "It requires Enterprise Edition to process multiple embeddings.",
+        "It caches results to avoid duplicate API calls."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following is most important for monitoring retrieval quality in a production RAG system?",
+      "options": [
+        "Measuring relevance of retrieved context (e.g. human feedback, LLM-as-judge, or A/B tests) and monitoring for drift when changing embeddings or schema.",
+        "Storing every user query in a single table without labels.",
+        "Disabling logging to reduce cost.",
+        "Tracking only the number of API calls per minute."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What are the three main steps in the RAG process?",
+      "options": [
+        "Understanding the User Query, Information Retrieval, Response Generation.",
+        "Encoding, Storing, Retrieving.",
+        "Training, Testing, Deployment.",
+        "Data Collection, Model Training, Inference."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do search engines typically use knowledge graphs?",
+      "options": [
+        "To provide structured information about people, places, and things.",
+        "To rank search results only.",
+        "To replace traditional web indexing.",
+        "To store webpage HTML content."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What parameter should you use to pass previous conversation messages to the GraphRAG search method for multi-turn conversations?\n\nfrom neo4j_graphrag.types import LLMMessage\n\nhistory = [\n\tLLMMessage(role=\"user\", content=\"What is Neo4j?\"),\n\tLLMMessage(role=\"assistant\", content=\"Neo4j is a graph database...\")\n]\n\nresponse = rag.search(\n\tquery_text=\"Tell me more about its features\",\n\tmessage_history=history\n)",
+      "options": [
+        "message_history.",
+        "conversation_history.",
+        "previous_messages.",
+        "chat_history."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

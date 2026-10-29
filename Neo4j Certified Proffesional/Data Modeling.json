@@ -213,6 +213,73 @@
       "options": ["+Entity+.", "DefaultEntity.", "Node.", "Entity."],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "You are building a recommendation engine for an online store.\nThe store organizes products into departments, each containing sub-categories.\nAn excerpt of their category list is as follows:\n\nComputers & Accessories > Accessories\nComputers & Accessories > Computers & Laptops\nComputers & Accessories > Computers & Laptops > Apple\nComputers & Accessories > Computers & Laptops > Samsung\nComputers & Accessories > Data Storage\nComputers & Accessories > Input Devices\nComputers & Accessories > Input Devices > Keyboards\nComputers & Accessories > Input Devices > Mice\nComputers & Accessories > Printing\nComputers & Accessories > Printing > Printers\nComputers & Accessories > Printing > Cartridges\nWhich of the following actions should you take when modeling the data?",
+      "options": [
+        "Create a hierarchy of (:Category) nodes.",
+        "Create a category property on each node to hold an array of categories.",
+        "Assign a new label for each category to (:Product) nodes, for example, :Product_Accessories."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following statements about labels in Neo4j are true?",
+      "options": [
+        "Labels help categorize nodes.",
+        "A node can have more than one label.",
+        "Labels are required for every node.",
+        "A relationship can have multiple labels."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which of the following are elements of a Neo4j graph database?",
+      "options": [
+        "Nodes.",
+        "Labels.",
+        "Relationships.",
+        "Properties.",
+        "Collections.",
+        "Indexes."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Complete the code to mark the \"name\" property as mandatory during schema validation:\n\nfrom neo4j_graphrag.experimental.components.schema import (\n\tSchemaBuilder,\n\tNodeType,\n\tPropertyType,\n)\n\nschema_builder = SchemaBuilder()\n\nawait schema_builder.run(\n\tnode_types=[\n\t\tNodeType(\n\t\t\tlabel=\"Person\",\n\t\t\tproperties=[\n\t\t\t\tPropertyType(name=\"name\", type=\"STRING\", -- select --)\n\t\t\t\tPropertyType(name=\"place_of_birth\", type=\"STRING\"),\n\t\t\t],\n\t\t),\n\t],\n)",
+      "options": [
+        "required=True.",
+        "mandatory=True.",
+        "nullable=False.",
+        "optional=False."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What happens when you set schema=\"EXTRACTED\" (or omit the schema parameter) in the SimpleKGPipeline?",
+      "options": [
+        "The schema is automatically extracted from the input text once using an LLM.",
+        "Entity and relation extraction proceeds without any schema guidance.",
+        "A predefined schema is loaded from the Neo4j database.",
+        "The schema must be manually defined before processing."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What are organizing principles in a knowledge graph?",
+      "options": [
+        "Rules or categories that provide structure to the data.",
+        "Database backup strategies.",
+        "Programming languages used to build the graph.",
+        "User interface layouts."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
