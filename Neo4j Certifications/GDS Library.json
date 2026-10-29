@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "question": "The mutate mode will allow you to overwrite the mutateProperty from previous calculations.",
+      "options": ["True.", "False."],
+      "correct_option": 1,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What algorithm execution mode should you use to return the calculation results to the screen?",
+      "options": ["stream.", "mutate.", "write.", "stats."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What types of graph algorithms does the Neo4j Graph Data Science Library support?",
+      "options": [
+        "Community Detection algorithms.",
+        "Centrality algorithms.",
+        "Pathfinding algorithms.",
+        "Similarity algorithms."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Suppose you calculate PageRank on an in-memory graph and want to output the results from the .stream() function. How do you return the node object for a given node?",
+      "options": [
+        "YIELD nodeId RETURN gds.util.asNode(nodeId).",
+        "YIELD node RETURN node.",
+        "YIELD nodeId RETURN nodeId.",
+        "None of the other options."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Algorithms exist in one of three tiers of maturity. What are the tiers?",
+      "options": ["Production-quality.", "Alpha.", "Beta.", "Gamma."],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What algorithm execution mode should you use to add the results to the database?",
+      "options": ["write.", "stats.", "mutate.", "stream."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What utility function can you use to find a given node based on the node id?",
+      "options": [
+        "gds.util.asNode().",
+        "gds.util.matchNode().",
+        "gds.util.findNode().",
+        "gds.util.returnNode()."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "You can run a procedure in write mode multiple times to update existing properties.",
+      "options": ["True.", "False."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

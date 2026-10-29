@@ -1,0 +1,181 @@
+{
+  "questions": [
+    {
+      "question": "How do you control the number of concurrent threads used by an algorithm?",
+      "options": [
+        "Specify the configuration parameter concurrency. By default most algorithms use only 4 threads.",
+        "Specify a new default for the parameter concurrency using CALL gds.config.defaults.set('concurrency', 8).",
+        "Specify the configuration parameter computationConcurrency.",
+        "The number of concurrent threads cannot be configured. GDS will always use all available threads."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Suppose you have projected a named containing Person and Organization nodes. You want to run an algorithm only on the Person nodes. What parameter do you use to filter which node labels will be used at run-time?",
+      "options": [
+        "nodeLabels.",
+        "nodeProjection.",
+        "nodeQuery.",
+        "nodeFilter."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you use native projection to load a named graph that contains nodes labeled Person and Organization, and the MEMBER relationship?",
+      "options": [
+        "gds.graph.project('graph', ['Person', 'Organization'], 'MEMBER').",
+        "gds.graph.project('graph', 'Person', 'Organization', 'MEMBER').",
+        "gds.graph.project('graph', 'MEMBER', ['Person', 'Organization']).",
+        "gds.graph.create.project('graph', ['Person', 'Organization'], 'MEMBER')."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What types of supervised machine learning pipelines are currently supported by Neo4j GDS?",
+      "options": [
+        "Link Prediction.",
+        "Node Classification.",
+        "Relationship Classification.",
+        "Graph Neural Network."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What are the supported modes for executing graph algorithms?",
+      "options": ["stream.", "mutate.", "write.", "execute."],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which procedures can you use to project an in-memory graph?",
+      "options": [
+        "Cypher projection.",
+        "Native projection.",
+        "Data transformer.",
+        "Algorithm projection."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How do you estimate memory requirements for the PageRank algorithm using the write mode?",
+      "options": [
+        "gds.pageRank.write.estimate().",
+        "gds.pageRank.estimate('write').",
+        "gds.pageRank.estimate.write().",
+        "gds.pageRank.memory()."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Suppose you have a named graph in the Graph Catalog that contains the mutated node properties 'pageRank' and 'louvain'. How do you store the mutated properties back to Neo4j?",
+      "options": [
+        "gds.graph.nodeProperties.write('my-graph', ['pageRank', 'louvain']).",
+        "gds.graph.writeBack('my-graph', ['pageRank', 'louvain']).",
+        "gds.graph.writeRelationship('my-graph', ['pageRank', 'louvain']).",
+        "gds.store.results('my-graph', ['pageRank', 'louvain'])."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What do we call a network, where the relationships have a property representing the strength or cost of traversing the relationship?",
+      "options": [
+        "Weighted network.",
+        "Random network.",
+        "Unweighted network.",
+        "Monopartite network."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the mutate mode of an algorithm do?",
+      "options": [
+        "Writes the algorithm's results to the in-memory graph and returns a single record of summary statistics.",
+        "Allows users to change the results of the algorithm.",
+        "Writes the algorithm's results to the Neo4j database and returns a single record of summary statistics.",
+        "Returns the result of the algorithm as a stream of records."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you access a node property stored to a graph projection that was calculated with the .mutate() function?",
+      "options": [
+        "gds.util.nodeProperty.",
+        "gds.util.getNode.",
+        "gds.util.fromProperty.",
+        "gds.util."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How do you use a Cypher projection to create a graph that contains Person nodes and INTERACTS relationships that go only in the same direction as the relationships in the database?",
+      "options": [
+        "MATCH (s:Person)-[r:INTERACTS]->(t:Person) RETURN gds.graph.project('graph', s, t, {relationshipType: type(r)}).",
+        "gds.graph.project.cypher(s:Person)-[r:INTERACTS]->(t:Person) RETURN gds.graph.project('graph', s, t, {relationshipType: type(r)}).",
+        "gds.graph.project.cypher(s:Person)-[r:INTERACTS]-(t:Person) RETURN gds.graph.project('graph', t, s, {relationshipType: type(r)}).",
+        "MATCH (s:Person)-[r:INTERACTS]-(t:Person) RETURN gds.graph.project('graph', t, s, {relationshipType: type(r)})."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What are the benefits of using a graph projection?",
+      "options": [
+        "You can pick only analytically relevant portions of the database on which to act.",
+        "They are compressed data structures optimized for topology and property lookup operations.",
+        "You can only use them once, ensuring clarity on the results were calculated.",
+        "The GDS library can act on either graph projections or the full database, so there is no benefit."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How do you list all the projected named graphs in the Graph Catalog?",
+      "options": [
+        "gds.graph.list().",
+        "gds.graph.drop().",
+        "gds.graph.create().",
+        "gds.show.graphs()."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which node embedding techniques can encode both graph topology and node properties?",
+      "options": ["FastRP.", "GraphSAGE.", "Node2Vec.", "DeepWalk."],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How do you drop a named graph projection from the Graph Catalog?",
+      "options": [
+        "CALL gds.graph.drop('my-graph').",
+        "CALL gds.graph.delete('my-graph').",
+        "gds.graph.drop('my-graph').",
+        "gds.graph.delete('my-graph')."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following can be used to create an in-memory graph using native projection?",
+      "options": [
+        "Relationship orientation.",
+        "Relationship property aggregations.",
+        "Node property types based on lists.",
+        "Node property types based on maps."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    }
+  ]
+}

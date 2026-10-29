@@ -58,6 +58,36 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What transport method allows an MCP client to start a server locally and communicate through standard input/output streams?",
+      "options": ["stdio.", "SSE (Server-Sent Events).", "HTTP.", "WebSocket."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What decorator is used to create an async context manager for managing server lifecycle resources in FastMCP?",
+      "options": [
+        "@asynccontextmanager.",
+        "@lifecycle.",
+        "@contextmanager.",
+        "@lifespan."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following are core components of the MCP architecture?",
+      "options": [
+        "Clients that manage connections to servers.",
+        "Hosts that maintain session state and context.",
+        "Servers that provide capabilities through tools.",
+        "Tools with unique identifiers and parameters.",
+        "Databases that store MCP configurations.",
+        "Models that process natural language."
+      ],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
     }
   ]
 }

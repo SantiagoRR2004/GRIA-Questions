@@ -201,6 +201,39 @@
       "options": ["SEARCH.", "CALL.", "FILTER.", "WITH."],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What statement best describes properties in Neo4j?",
+      "options": [
+        "Properties are the key-value pairs used for nodes and relationships.",
+        "Properties are the key-value pairs used exclusively for nodes.",
+        "Properties are the key-value pairs used exclusively for relationships.",
+        "None of the other options."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which types of queries are well-suited for vector search?",
+      "options": [
+        "Complex queries with multiple concepts.",
+        "Fuzzy or vague queries.",
+        "Contextual or meaning-based questions.",
+        "Highly specific fact-based questions requiring exact matches."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What is an important security consideration when using text-to-Cypher retrievers in production?",
+      "options": [
+        "LLM-generated Cypher queries should be validated and access to data should be limited to prevent malicious queries.",
+        "Text-to-Cypher can only read data, never modify it, so there are no security concerns.",
+        "The LLM automatically sanitizes all user input before generating queries.",
+        "Text-to-Cypher always generates perfect queries that never need validation."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

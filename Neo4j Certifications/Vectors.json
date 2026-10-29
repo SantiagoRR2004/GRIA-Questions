@@ -13,7 +13,7 @@
     },
     {
       "question": "Complete the Python code to create an embedding using the OpenAI API:\n\nfrom openai import OpenAI\n\nclient = OpenAI(api_key=api_key)\n\nresponse = client.embeddings.-- select --\n\tmodel=\"text-embedding-ada-002\",\n\tinput=\"What is a knowledge graph?\"\n)\n\nembedding = response.data[0].embedding",
-      "options": ["create.", "generate.", "get_embedding."],
+      "options": ["create.", "generate.", "get_embedding.", "embed."],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -57,6 +57,45 @@
         "CREATE INDEX question_embeddings.",
         "CREATE VECTOR question_embeddings.",
         "VECTOR INDEX question_embeddings."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the Python code to create a Neo4j vector retriever in LangChain:\n\nfrom langchain_community.vectorstores.neo4j_vector import Neo4jVector\n\nvector_store = Neo4jVector.-- select --\n\tembedding=embedding_provider,\n\turl=NEO4J_URI,\n\tusername=NEO4J_USERNAME,\n\tpassword=NEO4J_PASSWORD,\n\tindex_name=\"question_embeddings\"\n)",
+      "options": [
+        "from_existing_index.",
+        "from_index.",
+        "load_index.",
+        "connect_to_index."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following are valid types of embedding models?",
+      "options": [
+        "Word2Vec - generates word embeddings based on context.",
+        "Universal Sentence Encoder - converts sentences into embeddings.",
+        "Node2Vec - generates embeddings based on random walks through a graph.",
+        "GraphQL - generates embeddings for API queries."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "In a knowledge graph construction pipeline, what is the name of the process that breaks down large text documents into smaller, manageable pieces?",
+      "options": ["chunking."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the main difference between semantic search and traditional keyword search?",
+      "options": [
+        "Semantic search understands intent and contextual meaning, not just exact keywords.",
+        "Semantic search is faster than keyword search.",
+        "Keyword search provides more accurate results.",
+        "Semantic search only works with structured data."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
