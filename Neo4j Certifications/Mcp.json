@@ -88,6 +88,30 @@
       ],
       "correct_options": [0, 1, 2, 3],
       "questionType": "multipleChoice"
+    },
+    {
+      "question": "Complete the Cypher query to implement pagination that skips the first 100 movies and returns the next 50:\n\nMATCH (m:Movie)\nRETURN m.title AS title\nORDER BY m.title\n-- select --",
+      "options": [
+        "SKIP 100 LIMIT 50.",
+        "LIMIT 50 SKIP 100.",
+        "OFFSET 100 LIMIT 50.",
+        "LIMIT 50 OFFSET 100."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Which tools are provided by the Neo4j Cypher MCP server?",
+      "options": [
+        "get-neo4j-schema.",
+        "read-neo4j-cypher.",
+        "write-neo4j-cypher.",
+        "backup-neo4j-database.",
+        "create-neo4j-index.",
+        "migrate-neo4j-data."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
     }
   ]
 }

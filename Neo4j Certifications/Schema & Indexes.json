@@ -145,6 +145,28 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What does it mean that Neo4j is a \"labeled property graph\" database?",
+      "options": [
+        "Nodes are categorized by labels and both nodes and relationships can have properties.",
+        "It requires a fixed schema with predefined labels and properties.",
+        "All data must be labeled before it can be stored.",
+        "Labels can only be applied to relationships, not nodes."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What Cypher statement is used to create a vector index in Neo4j?",
+      "options": [
+        "CREATE VECTOR INDEX.",
+        "ADD VECTOR INDEX.",
+        "CREATE INDEX FOR VECTOR.",
+        "DEFINE VECTOR INDEX."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
