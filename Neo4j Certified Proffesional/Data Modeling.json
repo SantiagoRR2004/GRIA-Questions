@@ -280,6 +280,17 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following are true about relationships in Neo4j?",
+      "options": [
+        "Relationships can have properties.",
+        "Relationships always have a type.",
+        "Relationships always have a direction.",
+        "Relationships can connect more than two nodes."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
     }
   ]
 }

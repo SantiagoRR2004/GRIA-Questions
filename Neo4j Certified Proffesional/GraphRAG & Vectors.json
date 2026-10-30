@@ -287,6 +287,97 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What factors determine the appropriate chunk size when processing data for knowledge graphs?",
+      "options": [
+        "The complexity of the data.",
+        "The LLM being used.",
+        "What you want to extract from the data.",
+        "The database version.",
+        "The color scheme of your application."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "Which methods does Neo4j support for building retrievers in RAG applications?",
+      "options": [
+        "Text to Cypher.",
+        "Vector search.",
+        "Full-text search.",
+        "MapReduce operations.",
+        "Relational SQL queries."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What types of data sources can be used in RAG applications?",
+      "options": [
+        "Documents (articles, reports, manuals).",
+        "Knowledge graphs with entity relationships.",
+        "APIs providing real-time data.",
+        "Only structured SQL tables.",
+        "Only vector databases."
+      ],
+      "correct_options": [0, 1, 2],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "How does Neo4j's graph structure of nodes and relationships benefit Retrieval-Augmented Generation (RAG) applications?",
+      "options": [
+        "It enables traversing connections between entities to provide contextual information.",
+        "It automatically generates embeddings without requiring external models.",
+        "It eliminates the need for vector similarity search entirely.",
+        "It allows storing larger text documents than vector databases."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What do dimensions in an embedding vector represent?",
+      "options": [
+        "Semantic aspects or features of the data.",
+        "Timestamps of data creation.",
+        "Database table columns.",
+        "Physical coordinates in space."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What additional information can you provide to an LLM to improve entity and relationship extraction?",
+      "options": [
+        "Context or constraints about entity types or relationships of interest.",
+        "Historical query logs.",
+        "The server IP address.",
+        "The database password."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does the acronym RAG stand for in the context of GenAI applications?",
+      "options": [
+        "Retrieval-Augmented Generation.",
+        "Recursive Aggregate Graphs.",
+        "Real-time Analysis Gateway.",
+        "Rapid Application Generation."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is Retrieval-Augmented Generation (RAG)?",
+      "options": [
+        "An approach that enhances LLM responses by providing relevant information from external sources.",
+        "A technique for compressing large language models.",
+        "A way to fine-tune models without additional data.",
+        "A method for training LLMs from scratch."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

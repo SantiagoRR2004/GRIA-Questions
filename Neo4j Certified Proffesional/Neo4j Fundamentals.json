@@ -234,6 +234,34 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Which of the following are fundamental elements of a Neo4j property graph?",
+      "options": ["Labels.", "Nodes.", "Properties.", "Relationships."],
+      "correct_options": [0, 1, 2, 3],
+      "questionType": "multipleChoice"
+    },
+    {
+      "question": "What is the primary goal of semantic search compared to traditional keyword search?",
+      "options": [
+        "To understand the intent and contextual meaning of search phrases.",
+        "To find exact keyword matches in documents.",
+        "To translate queries into multiple languages automatically.",
+        "To search only the most recent documents."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What term describes the process of providing context to an LLM to improve accuracy and reduce hallucinations?",
+      "options": [
+        "Grounding.",
+        "Fine-tuning.",
+        "Prompt engineering.",
+        "Model training."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

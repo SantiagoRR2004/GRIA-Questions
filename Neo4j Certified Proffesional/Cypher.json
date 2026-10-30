@@ -546,6 +546,28 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "What is an important consideration when determining the batch size for ai.text.embedBatch()?\n\nMATCH (m:Movie) LIMIT 500\nWITH collect(m) AS moviesList,\n\tcount(*) AS total,\n\t100 AS batchSize  // Control batch size\nUNWIND range(0, total-1, batchSize) AS batchStart\nCALL (moviesList, batchStart, batchSize) {\n\tWITH [movie IN moviesList[batchStart .. batchStart + batchSize] | movie.plot] AS batch\n\tCALL ai.text.embedBatch(batch, 'OpenAI', $config) YIELD index, vector\n\t// Process results...\n} IN CONCURRENT TRANSACTIONS OF 1 ROW",
+      "options": [
+        "Too large a batch size may cause the AI provider to timeout or reject the request.",
+        "Larger batch sizes always improve performance without drawbacks.",
+        "The procedure automatically splits large batches into optimal sizes.",
+        "Batch size must always be exactly 100 resources."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "In Cypher, what does the arrow direction in (m:Movie)<-[r:ACTED_IN]-(p:Person) indicate?",
+      "options": [
+        "The direction of the ACTED_IN relationship from Person to Movie.",
+        "The order in which nodes were created.",
+        "The primary key relationship.",
+        "The alphabetical sorting of results."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }

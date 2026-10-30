@@ -99,6 +99,28 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the OPTIONS clause for creating a vector index with the correct dimension property:\n\nCREATE VECTOR INDEX movie_embeddings\nFOR (m:Movie)\nON m.embedding\nOPTIONS {indexConfig: {\n  -- select --,\n  `vector.similarity_function`: 'cosine'\n}}",
+      "options": [
+        "`vector.dimensions`: 1536.",
+        "`dimensions`: 1536.",
+        "`vector.size`: 1536.",
+        "`embedding.dimensions`: 1536."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What does a similarity score of 1.0 represent in a vector search result?\n\nMATCH (m:Movie {title: 'Toy Story'})\nMATCH (movie:Movie)\n\tSEARCH movie IN (\n\t\tVECTOR INDEX moviePlots\n\t\tFOR m.plotEmbedding\n\t\tLIMIT 6\n\t) SCORE AS score\nRETURN movie.title, score",
+      "options": [
+        "Perfect similarity (identical or nearly identical vectors).",
+        "No similarity between vectors.",
+        "The vector is invalid.",
+        "Average similarity."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
