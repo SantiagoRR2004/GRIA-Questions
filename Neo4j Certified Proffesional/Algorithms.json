@@ -268,6 +268,17 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Which parameters can be used to define the sampling technique when you use the approximate Betweenness Centrality algorithm?",
+      "options": [
+        "samplingSeed.",
+        "samplingSize.",
+        "relationshipWeightProperty.",
+        "writeProperty."
+      ],
+      "correct_options": [0, 1],
+      "questionType": "multipleChoice"
     }
   ]
 }
