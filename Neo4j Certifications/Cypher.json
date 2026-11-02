@@ -63,16 +63,6 @@
       "questionType": "singleChoice"
     },
     {
-      "question": "Which of the following statements about case sensitivity in Cypher are true?",
-      "options": [
-        "Labels and property keys are case-sensitive.",
-        "Variables are case-sensitive.",
-        "Labels, property keys, and variables are case-sensitive, but Cypher keywords are not."
-      ],
-      "correct_options": [0, 1, 2],
-      "questionType": "multipleChoice"
-    },
-    {
       "question": "How can you ensure that a property exists in a Cypher query?",
       "options": [
         "Use the 'IS NOT NULL' operator.",
@@ -119,7 +109,10 @@
     {
       "question": "What is the difference between UNION and UNION ALL in Neo4j?",
       "options": [
-        "UNION returns distinct results, while UNION ALL returns all results including duplicates."
+        "UNION returns distinct results, while UNION ALL returns all results including duplicates.",
+        "UNION and UNION ALL have no difference in Neo4j.",
+        "UNION and UNION ALL are interchangeable in Neo4j.",
+        "UNION ALL returns distinct results, while UNION returns all results including duplicates."
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
@@ -416,12 +409,13 @@
     {
       "question": "Which of the following statements about case sensitivity in Cypher are true?",
       "options": [
-        "Labels and property keys are case-sensitive",
-        "Variables are case-sensitive",
-        "All Cypher queries must be written in lowercase",
-        "Cypher keywords are case-sensitive"
+        "Labels and property keys are case-sensitive.",
+        "Variables are case-sensitive.",
+        "Labels, property keys, and variables are case-sensitive, but Cypher keywords are not.",
+        "All Cypher queries must be written in lowercase.",
+        "Cypher keywords are case-sensitive."
       ],
-      "correct_options": [0, 1],
+      "correct_options": [0, 1, 2],
       "questionType": "multipleChoice"
     },
     {
@@ -566,6 +560,23 @@
         "The primary key relationship.",
         "The alphabetical sorting of results."
       ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Arrange the fragments to build a query that returns the Person node whose name is 'Tom Hanks'",
+      "options": [
+        "MATCH (p:Person) WHERE p.name = 'Tom Hanks' RETURN p.",
+        "RETURN p MATCH (p:Person) WHERE p.name = 'Tom Hanks'.",
+        "MATCH (p:Person) RETURN p WHERE p.name = 'Tom Hanks'.",
+        "WHERE p.name = 'Tom Hanks' MATCH (p:Person) RETURN p."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Complete the query so each person is returned with the number of movies they acted in, using a COUNT subquery.\n\nMATCH (p:Person)\nRETURN p.name,\n-- select -- { (p)-[:ACTED_IN]->(:Movie) } AS movies",
+      "options": ["COUNT."],
       "correct_option": 0,
       "questionType": "singleChoice"
     }

@@ -8,7 +8,11 @@
     },
     {
       "question": "Which of the following statements is correct?",
-      "options": ["Neo4j allows for an optional schema."],
+      "options": [
+        "Neo4j allows for an optional schema.",
+        "Neo4j does not support schemas.",
+        "Neo4j enforces a strict schema."
+      ],
       "correct_option": 0,
       "questionType": "singleChoice"
     },

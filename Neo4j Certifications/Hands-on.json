@@ -1,0 +1,130 @@
+{
+  "questions": [
+    {
+      "question": "How many Movie nodes are in the database?",
+      "options": ["RETURN count { (:Movie) } as count."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the actor whose name contains \"Tom\" and has appeared in the most movies released in 2010 or later?",
+      "options": [
+        "MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) WHERE a.name CONTAINS 'Tom' AND m.year >= 2010 WITH a, COUNT(m) as movieCount RETURN a.name, movieCount ORDER BY movieCount DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How many Actor nodes are in the database?",
+      "options": ["RETURN count { (:Actor) } as count."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What percentage of people in the database are directors? Round to 2 decimal places.",
+      "options": [
+        "RETURN round(100.0 * COUNT {(:Director)} / COUNT {(:Person)}, 2) as percentage."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the actor who appeared in the most movies released in the 1990s (1990-1999)?",
+      "options": [
+        "MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) WHERE m.year >= 1990 AND m.year < 2000 WITH a, COUNT(DISTINCT m) as moviesIn90s RETURN a.name, moviesIn90s ORDER BY moviesIn90s DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the director with the longest career span (measured by years between their first and last directed movie), considering only directors who have directed at least 10 movies?",
+      "options": [
+        "MATCH (d:Director)-[:DIRECTED]->(m:Movie) WHERE m.year IS NOT NULL WITH d, min(m.year) as firstYear, max(m.year) as lastYear, COUNT(m) as movieCount WHERE movieCount >= 10 WITH d, lastYear - firstYear as careerSpan, movieCount RETURN d.name, careerSpan, movieCount ORDER BY careerSpan DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How many User nodes are in the database?",
+      "options": ["RETURN count { (:User) } as count."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How many Director nodes are in the database?",
+      "options": ["RETURN count { (:Director) } as count."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the highest-rated movie in the database based on to the imdbRating property?",
+      "options": [
+        "MATCH (m:Movie) WHERE m.imdbRating IS NOT NULL RETURN m.title as movie, m.imdbRating as rating ORDER BY m.imdbRating DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the actor who has co-starred with Tom Hanks in the most movies?\n\nIn the event of a tie, return the first actor by their name in alphabetical order.",
+      "options": [
+        "MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)<-[:ACTED_IN]-(b:Actor) WHERE a.name = 'Tom Hanks' AND a <> b WITH b, COUNT(DISTINCT m) as collaborations RETURN b.name, collaborations ORDER BY collaborations DESC, b.name ASC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the actor who has appeared in the most movies with an imdbRating of 8.0 or higher?",
+      "options": [
+        "MATCH (a:Actor)-[:ACTED_IN]->(m:Movie) WHERE m.imdbRating >= 8.0 WITH a, COUNT(m) as highRatedCount RETURN a.name, highRatedCount ORDER BY highRatedCount DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the Marx brother (actor whose name ends with \"Marx\") has the highest average user rating through RATED relationships across all their movies? Only consider actors who have received at least 10 total user ratings.\n\nIn the event of a tie, return the actor whose name comes first alphabetically.",
+      "options": [
+        "MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)<-[r:RATED]-(u:User) WHERE a.name ENDS WITH 'Marx' WITH a, AVG(r.rating) as avgRating, COUNT(r) as numRatings WHERE numRatings >= 10 RETURN a.name as actor, round(avgRating * 100) / 100 as avgRating, numRatings ORDER BY avgRating DESC, actor ASC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How many Person nodes are in the database?",
+      "options": ["RETURN count { (:Person) } as count."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What percentage of people in the database are actors? Round to 2 decimal places.",
+      "options": [
+        "RETURN round(100.0 * COUNT {(:Actor)} / COUNT {(:Person)}, 2) as percentage."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "How many movies has Darlene Garcia given a perfect 5.0 rating?",
+      "options": [
+        "MATCH (u:User {name: 'Darlene Garcia'})-[r:RATED]->(m:Movie) WHERE r.rating = 5.0 RETURN COUNT(m) as fiveStarCount."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the person who has both acted in and directed the most movies?",
+      "options": [
+        "MATCH (p:Person)-[:ACTED_IN]->(m:Movie) MATCH (p)-[:DIRECTED]->(m) WITH p, COUNT(m) as dualRole RETURN p.name, dualRole ORDER BY dualRole DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "What is the name of the actor who has appeared in movies spanning the most different genres, considering only actors with at least 20 movies? In case of a tie in genre count, consider the actor with the most total movies.",
+      "options": [
+        "MATCH (a:Actor)-[:ACTED_IN]->(m:Movie)-[:IN_GENRE]->(g:Genre) WITH a, COUNT(DISTINCT g) as genreCount, COUNT(m) as movieCount WHERE movieCount >= 20 RETURN a.name, genreCount, movieCount ORDER BY genreCount DESC, movieCount DESC LIMIT 5."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    }
+  ]
+}

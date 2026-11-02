@@ -19,7 +19,7 @@
     },
     {
       "question": "What is the default port for connecting to a Neo4j database using the driver?",
-      "options": ["7687.", "8501."],
+      "options": ["7687.", "8501.", "7474.", "7987."],
       "correct_option": 0,
       "questionType": "singleChoice"
     },
@@ -108,6 +108,12 @@
     {
       "question": "Complete the Python code to create a Neo4j driver instance:\n\nfrom neo4j import GraphDatabase\n\ndriver = GraphDatabase.-- select --\n\turi,\n\tauth=(username, password)\n)",
       "options": ["driver(.", "connect(.", "create_driver(.", "new_driver(."],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "When Neo4jError is raised by the DBMS, the gql_error property corresponds to what?",
+      "options": ["ISO GQL Standard.", "GraphQLError Exception."],
       "correct_option": 0,
       "questionType": "singleChoice"
     }

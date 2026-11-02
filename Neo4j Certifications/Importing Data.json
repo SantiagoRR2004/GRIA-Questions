@@ -71,6 +71,14 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Build a batched import.\n\nArrange the fragments to import people.csv in batches of 500 rows.",
+      "options": [
+        "LOAD CSV WITH HEADERS FROM 'file:///people.csv' AS row CALL (row) { MERGE (p:Person {id: row.id}) } IN TRANSACTIONS OF 500 ROWS."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
