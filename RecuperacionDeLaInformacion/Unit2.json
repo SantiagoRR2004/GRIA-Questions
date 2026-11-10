@@ -192,6 +192,94 @@
       ],
       "correct_option": 0,
       "questionType": "singleChoice"
+    },
+    {
+      "question": "Si una palabra aparece en todos los documentos de un corpus, ¿qué efecto tiene esto en su peso TF-IDF?",
+      "options": [
+        "Su peso disminuye, ya que IDF será bajo.",
+        "Su peso aumenta automáticamente.",
+        "TF-IDF no considera cuántos documentos contienen la palabra.",
+        "No tiene ningún efecto sobre TF-IDF."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué problemas pueden surgir si no normalizamos texto antes de bag of words?",
+      "options": [
+        "Puntuación genera palabras distintas (ej. \"Zahir,\" vs \"Zahir.\").",
+        "Palabras con mayúsculas y minúsculas se cuentan como iguales.",
+        "Se pierde la información sobre frecuencia de términos.",
+        "Los trigramas no se pueden generar."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Imagina que tienes un corpus y quieres encontrar el documento más parecido a uno dado. ¿Qué técnica es más confiable?",
+      "options": [
+        "Calcular TF-IDF de todos los documentos y usar similitud coseno.",
+        "Sumar las frecuencias de términos de la query en cada documento.",
+        "Contar cuántas palabras aparecen en los títulos.",
+        "Usar solo bigramas sin TF-IDF."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "Tienes la frase “El Sr. J.P. revisó el módulo de la A.P.I.”. El segmentador corta tras cada punto. ¿Qué podrías hacer para corregirlo?",
+      "options": [
+        "Entrenar un segmentador e incluir abreviaturas como “sr”, “jp”, “api”.",
+        "Usar split('.') para controlar los cortes.",
+        "Eliminar todas las abreviaturas del texto.",
+        "Cambiar el idioma del segmentador a inglés."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué es útil la similitud coseno en comparación con la distancia euclidiana?",
+      "options": [
+        "Considera la dirección del vector de términos.",
+        "Da más peso a documentos largos automáticamente.",
+        "No normaliza por la longitud del documento.",
+        "Ignora los términos raros."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Qué hace TfidfVectorizer de Scikit-Learn?",
+      "options": [
+        "Convierte un corpus de texto en un array TF-IDF.",
+        "Genera bigramas automáticamente si no se especifica.",
+        "Elimina documentos duplicados.",
+        "Calcula el vocabulario del corpus."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué se recomienda usar la API oficial de Wikipedia en lugar de scraping directo?",
+      "options": [
+        "Porque evita bloqueos y respeta las políticas del sitio.",
+        "Porque genera archivos CSV automáticamente.",
+        "Porque es más rápida al usar hilos.",
+        "Porque no necesita conexión a Internet."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
+    },
+    {
+      "question": "¿Por qué es recomendable normalizar el texto a minúsculas y eliminar puntuación antes de aplicar bag of words o TF-IDF?",
+      "options": [
+        "Para evitar que \"El\" y \"el\" o \"Zahir,\" y \"Zahir.\" se cuenten como palabras diferentes.",
+        "Para aumentar el peso de palabras raras.",
+        "Para usar matrices dispersas más grandes.",
+        "Para generar bigramas automáticamente."
+      ],
+      "correct_option": 0,
+      "questionType": "singleChoice"
     }
   ]
 }
